@@ -1,0 +1,36 @@
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (1).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (10).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (2).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (3).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (4).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (5).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (6).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (7).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (8).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Dead (9).xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\2DGame.exe
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\2DGame.pdb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\MonoGame.Framework.dll
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.dll
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.XInput.dll
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\MonoGame.Framework.xml
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.xml
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.XInput.xml
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+D:\UserFiles\Desktop\2DGame\2DGame\obj\x86\Debug\2DGame.csprojResolveAssemblyReference.cache
+D:\UserFiles\Desktop\2DGame\2DGame\obj\x86\Debug\2DGame.exe
+D:\UserFiles\Desktop\2DGame\2DGame\obj\x86\Debug\2DGame.pdb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Content.mgcb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\Run.xnb
+D:\UserFiles\Desktop\2DGame\2DGame\bin\Windows\x86\Debug\Content\Player\flameball-32x32.xnb

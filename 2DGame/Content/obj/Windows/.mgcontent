@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (1).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (2).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (3).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (4).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (5).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (6).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (7).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (8).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (9).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Dead (10).png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/Run.png</File>
+    <File>D:/UserFiles/Desktop/2DGame/2DGame/Content/Player/flameball-32x32.png</File>
+  </SourceFiles>
+</SourceFileCollection>
