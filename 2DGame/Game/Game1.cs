@@ -28,7 +28,8 @@ namespace _2DGame
             graphics = new GraphicsDeviceManager(this);           
             Content.RootDirectory = "Content";     
             
-            //My friends changes       
+
+            //My changes here
         }
 
         /// <summary>
