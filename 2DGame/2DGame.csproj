@@ -41,11 +41,17 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Game\Animation.cs" />
-    <Compile Include="Game\AnimationHandler.cs" />
+    <Compile Include="Game\Animation\Animation.cs" />
+    <Compile Include="Game\Animation\AnimationHandler.cs" />
+    <Compile Include="Game\Collisions\BoundingBox.cs" />
     <Compile Include="Game\Game1.cs" />
+    <Compile Include="Game\Managers\InputHandler.cs" />
+    <Compile Include="Game\Collisions\Line.cs" />
+    <Compile Include="Game\Particles\Particle.cs" />
+    <Compile Include="Game\Particles\ParticleEngine.cs" />
     <Compile Include="Game\Player.cs" />
     <Compile Include="Game\Program.cs" />
+    <Compile Include="Game\Animation\TextureReel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
