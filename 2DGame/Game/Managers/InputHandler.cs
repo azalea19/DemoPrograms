@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
-    class InputHandler
+    public class InputHandler
     {
         private KeyboardState lastKeyboardState;
         private KeyboardState currentKeyboardState;
