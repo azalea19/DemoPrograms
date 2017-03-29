@@ -4,50 +4,6 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/001.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/002.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/003.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/004.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/005.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/006.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/007.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/008.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/009.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/010.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/011.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/012.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/013.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/014.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/015.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/016.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/017.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/018.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/019.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/001.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/002.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/003.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/004.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/005.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/006.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/007.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/008.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/009.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/010.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Run/011.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/1.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/2.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/3.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/4.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/5.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/6.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/7.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/8.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/10.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/13.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/15.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/17.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/19.png</File>
-    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Jump/21.png</File>
     <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Particles/particle.png</File>
     <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Particles/pink.png</File>
     <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Particles/pinkglow.png</File>
@@ -57,5 +13,68 @@
     <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Particles/smoke1.png</File>
     <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Particles/smoke2.png</File>
     <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Particles/smoke3.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/001.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/002.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/003.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/004.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/005.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/006.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/007.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/008.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/009.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/010.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/011.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/012.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/013.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/014.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/015.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/016.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/017.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/018.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Dead/019.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/001.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/002.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/003.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/004.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/005.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/006.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/007.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/008.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/009.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/010.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/011.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/012.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/013.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/014.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/015.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/016.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/017.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/018.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Idle/019.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/1.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/2.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/3.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/4.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/5.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/6.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/7.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/8.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/10.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/13.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/15.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/17.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/19.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Jump/21.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/001.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/002.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/003.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/004.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/005.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/006.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/007.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/008.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/009.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/010.png</File>
+    <File>C:/Users/Maddie/Desktop/DemoPrograms/2DGame/Content/Player/Run/011.png</File>
   </SourceFiles>
 </SourceFileCollection>

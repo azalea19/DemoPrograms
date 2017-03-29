@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -12,21 +13,24 @@ namespace _2DGame
     public class Game1 : Game
     {
         public static GraphicsDevice graphicsDevice;
+        public static ContentManager contentManager;
+        public static InputHandler inputHandler;
         GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;
         SpriteEffects spriteEffects;
-        private Texture2D robo;
-        AnimationHandler handler;
-        Animation animation;
-        InputHandler inputHandler;
+        Player p;
+
+        
         Vector2 lastPos;
         int count = 0;
         ParticleEngine particleEngine;
 
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);           
-            Content.RootDirectory = "Content";           
+            graphics = new GraphicsDeviceManager(this);
+            contentManager = Content;
+            contentManager.RootDirectory = "Content";
+            inputHandler = new InputHandler();
         }
 
         /// <summary>
@@ -49,28 +53,11 @@ namespace _2DGame
             particles.Add(Content.Load<Texture2D>("Particles/magicparticle"));
             particles.Add(Content.Load<Texture2D>("Particles/whiteglow"));
             particles.Add(Content.Load<Texture2D>("Particles/blueglow"));
-            particleEngine = new ParticleEngine(particles, new Vector2(100f,100f),1);
-
-            //animation = new Animation(Content.Load<Texture2D>("Player/Run"), 0.1f, true);
-            animation = new Animation(0.1f, true);
-            handler = new AnimationHandler(animation);
-
-            animation.AddFrame(Content.Load<Texture2D>("Jump/1"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/2"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/3"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/4"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/5"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/6"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/8"));
-            //animation.AddFrame(Content.Load<Texture2D>("Jump/9"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/10"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/13"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/17"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/19"));
-            animation.AddFrame(Content.Load<Texture2D>("Jump/21"));
-
-            inputHandler = new InputHandler();
+            particleEngine = new ParticleEngine(particles, new Vector2(100f,100f),1);           
+           
             lastPos = new Vector2(50f, 50f);
+
+            p = new Player();
             
         }
 
@@ -123,6 +110,8 @@ namespace _2DGame
             particleEngine.m_emitterLocation = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
             particleEngine.Update();
 
+            p.Update();
+
             base.Update(gameTime);
         }
 
@@ -132,16 +121,14 @@ namespace _2DGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            if(animation == null)
-            {
-                Console.WriteLine("null");
-            }
+            GraphicsDevice.Clear(Color.CornflowerBlue);          
 
             spriteBatch.Begin();
-            handler.Draw(animation, gameTime, spriteBatch, lastPos, spriteEffects, 1f);
+
+            p.Draw(gameTime, spriteBatch, spriteEffects);
+
             spriteBatch.End();
+
             // TODO: Add your drawing code here
             particleEngine.Draw(spriteBatch);
             base.Draw(gameTime);

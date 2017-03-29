@@ -38,32 +38,32 @@ namespace _2DGame
             return m_frameIndex;
         } 
 
-        public void Draw(Animation animation, GameTime gameTime, SpriteBatch spriteBatch, Vector2 position, SpriteEffects spriteEffects, float scale)
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 position, SpriteEffects spriteEffects, float scale)
         {
-            if (animation == null)
+            if (m_animation == null)
             {
                 throw new NotSupportedException("No animation is currently playing.");
             }
 
             //Process time passing
             m_time += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            while (m_time > animation.GetFrameTime())
+            while (m_time > m_animation.GetFrameTime())
             {
-                m_time -= animation.GetFrameTime();
+                m_time -= m_animation.GetFrameTime();
 
-                if (animation.IsLooping())
+                if (m_animation.IsLooping())
                 {
-                    m_frameIndex = (m_frameIndex + 1) % animation.GetFrameCount();
+                    m_frameIndex = (m_frameIndex + 1) % m_animation.GetFrameCount();
                 }
                 else
                 {
-                    m_frameIndex = Math.Min(m_frameIndex + 1, animation.GetFrameCount() - 1);
+                    m_frameIndex = Math.Min(m_frameIndex + 1, m_animation.GetFrameCount() - 1);
                 }
             }
 
             //Rectangle source = new Rectangle(m_frameIndex * animation.GetTexture().Height, 0, animation.GetTexture().Height, animation.GetTexture().Height);
             //spriteBatch.Draw(animation.GetTexture(m_frameIndex), position, Color.White);
-            spriteBatch.Draw(animation.GetTexture(m_frameIndex), position, null, Color.White, 0, new Vector2(0, 0), scale, spriteEffects, 0);
+            spriteBatch.Draw(m_animation.GetTexture(m_frameIndex), position, null, Color.White, 0, new Vector2(0, 0), scale, spriteEffects, 0);
             //spriteBatch.Draw(animation.GetTexture(), position, source, Color.White, 0.0f, GetOrigin(), 1.0f, spriteEffects, 0.0f);
         }
 
