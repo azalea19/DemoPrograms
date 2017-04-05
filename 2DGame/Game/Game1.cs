@@ -45,7 +45,7 @@ namespace _2DGame
             graphicsDevice = GraphicsDevice;
             graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
             graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;
             graphics.ApplyChanges();
 
             // TODO: Add your initialization logic here
@@ -110,7 +110,7 @@ namespace _2DGame
             particleEngine.m_emitterLocation = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
             particleEngine.Update();
 
-            p.Update();
+            p.Update(gameTime);
 
             base.Update(gameTime);
         }

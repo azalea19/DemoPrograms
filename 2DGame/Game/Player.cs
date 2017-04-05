@@ -9,14 +9,24 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
+    enum PlayerState
+    {
+        PS_IDLE,
+        PS_RUN,
+        PS_DEAD,
+        PS_JUMP
+    }
+
     public class Player
     {
+        private AnimationHandler[] m_animations;
         private AnimationHandler m_idle;
         private AnimationHandler m_run;
         private AnimationHandler m_dead;
         private AnimationHandler m_jump;
 
         private AnimationHandler m_current;
+
 
         private Vector2 m_position;
         private Vector2 m_velocity;
@@ -26,7 +36,7 @@ namespace _2DGame
             LoadAnimations();
             m_current = m_idle;
             m_position = new Vector2(100, 100);
-            m_velocity = new Vector2(1, 1);
+            m_velocity = new Vector2(1, 1);            
         } 
             
         public void LoadAnimations()
@@ -53,16 +63,18 @@ namespace _2DGame
             dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/019"));
             m_dead = new AnimationHandler(dead);
 
-            Animation jump = new Animation(0.1f, true);
+            Animation jump = new Animation(0.1f, false);
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/1"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/2"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/3"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/4"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/5"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/6"));
+            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/7"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/8"));            
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/10"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/13"));
+            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/15"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/17"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/19"));
             jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/21"));
@@ -106,20 +118,64 @@ namespace _2DGame
         }
 
 
-        public void Update()
+
+        public void Update(GameTime gameTime)
         {
-            if(Game1.inputHandler.KeyPressed(Keys.Space))
+            timeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            deadTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (m_current == m_jump)
             {
-                m_current = m_jump;
+                if(timeElapsed > m_jump.GetAnimation().GetFrameCount() * m_jump.GetAnimation().GetFrameTime())
+                {
+                    m_current = m_idle;
+                    m_current.Restart();
+                    timeElapsed = 0;
+                }
             }
-            if(Game1.inputHandler.KeyDown(Keys.D))
+
+            if(m_current == m_dead)
             {
-                m_current = m_run;
+                if(deadTime > m_dead.GetAnimation().GetFrameCount()*m_dead.GetAnimation().GetFrameTime())
+                {
+                    m_current = m_dead;
+                    m_current.Restart();
+                    deadTime = 0;
+                }
             }
-            else
+
+            if(m_current != m_jump || m_current != m_dead)
             {
-                m_current = m_idle;
-            }           
+                if(Game1.inputHandler.KeyPressed(Keys.K))
+                {
+                    m_current = m_dead;
+                    m_current.Restart();
+                    deadTime = 0;
+                }
+                if (Game1.inputHandler.KeyPressed(Keys.Space))
+                {
+                    m_current = m_jump;
+                    m_current.Restart();
+                    timeElapsed = 0;
+                }
+                else if (Game1.inputHandler.KeyDown(Keys.D))
+                {
+                    if(m_current != m_run)
+                    {
+                        m_current = m_run;
+                        m_current.Restart();
+                    }
+                }
+                else
+                {
+                    if(m_current != m_idle)
+                    {
+                        m_current = m_idle;
+                        m_current.Restart();
+                    }
+ 
+                }
+            }
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch, SpriteEffects spriteEffects)
