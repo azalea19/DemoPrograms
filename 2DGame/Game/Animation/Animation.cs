@@ -7,18 +7,14 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
-    class Animation
+    public class Animation
     {
-        //private Texture2D m_texture;
-
-        //private int m_frameWidthInPixels;
-        //private int m_frameHeightInPixels;
 
         private float m_frameTime;
         private bool m_isLooping;
         private TextureReel m_reel;
 
-        public Animation(Texture2D texture, float frameTime, bool isLooping)
+        public Animation(Texture texture, float frameTime, bool isLooping)
         {
             //m_texture = texture;
             m_frameTime = frameTime;
@@ -34,7 +30,7 @@ namespace _2DGame
             m_reel = new TextureReel();
         }
 
-        public void AddFrame(Texture2D texture)
+        public void AddFrame(Texture texture)
         {
             m_reel.AddTexture(texture);
         }
@@ -69,7 +65,7 @@ namespace _2DGame
             return m_reel.GetTextureHeight();
         }
 
-        public Texture2D GetTexture(int index)
+        public Texture GetTexture(int index)
         {
             return m_reel.GetTexture(index);
         }

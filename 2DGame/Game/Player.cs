@@ -9,178 +9,415 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
-    enum PlayerState
+
+    public static class PlayerState
     {
-        PS_IDLE,
-        PS_RUN,
-        PS_DEAD,
-        PS_JUMP
+        public const int IDLE_RIGHT = 0;
+        public const int RUN_RIGHT = 1;
+        public const int DEAD_RIGHT = 2;
+        public const int JUMP_RIGHT = 3;
+
+        public const int IDLE_LEFT = 4;    
+        public const int RUN_LEFT = 5;
+        public const int DEAD_LEFT = 6;
+        public const int JUMP_LEFT = 7;
+
+        public const int NUM_STATES = 8;
+    }
+
+    public static class InputAction
+    {
+        public const int LEFT = 0;
+        public const int RIGHT = 1;
+        public const int JUMP = 2;
+        public const int NUM_INPUTS = 3;       
     }
 
     public class Player
     {
-        private AnimationHandler[] m_animations;
-        private AnimationHandler m_idle;
-        private AnimationHandler m_run;
-        private AnimationHandler m_dead;
-        private AnimationHandler m_jump;
-
-        private AnimationHandler m_current;
+        List<Texture> particles = new List<Texture>();
+        private ParticleEngine jumpEmitter;
 
 
-        private Vector2 m_position;
-        private Vector2 m_velocity;
+        public AnimationHandler[] m_animations;
 
-        public Player()
-        {          
-            LoadAnimations();
-            m_current = m_idle;
-            m_position = new Vector2(100, 100);
-            m_velocity = new Vector2(1, 1);            
-        } 
-            
-        public void LoadAnimations()
+        int m_currentState;
+        float m_animationStart;
+
+        static private int[,] m_stateLookup;
+
+        public Vector2 m_position;
+        public Vector2 m_velocity;
+
+        public Player(Vector2 startPos)
         {
-            Animation dead = new Animation(0.1f, true);
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/001"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/002"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/003"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/004"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/005"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/006"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/007"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/008"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/009"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/010"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/011"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/012"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/013"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/014"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/015"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/016"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/017"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/018"));
-            dead.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Dead/019"));
-            m_dead = new AnimationHandler(dead);
+            m_animations = new AnimationHandler[PlayerState.NUM_STATES];           
+            m_stateLookup = new int[PlayerState.NUM_STATES, InputAction.NUM_INPUTS];
+            LoadAnimations();
+            LoadStateLookup();
+            m_position = startPos;
+            m_velocity = new Vector2(0, 0);
+            m_currentState = PlayerState.IDLE_RIGHT;
+            m_animationStart = 0;        
+            
+            particles.Add(Texture.Create("Particles/magicparticle"));
+            particles.Add(Texture.Create("Particles/blueglow"));
+            particles.Add(Texture.Create("Particles/whiteglow"));
+            jumpEmitter = new ParticleEngine(particles, m_position, 1, 0.4f);
+        } 
 
-            Animation jump = new Animation(0.1f, false);
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/1"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/2"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/3"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/4"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/5"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/6"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/7"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/8"));            
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/10"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/13"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/15"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/17"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/19"));
-            jump.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Jump/21"));
-            m_jump = new AnimationHandler(jump);
 
-            Animation idle = new Animation(0.1f, true);
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/001"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/002"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/003"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/004"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/005"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/006"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/007"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/008"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/009"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/010"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/011"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/012"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/013"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/014"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/015"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/016"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/017"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/018"));
-            idle.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Idle/019"));
-            m_idle = new AnimationHandler(idle);
+        public BoundingBox GetBoundingBox(GameTime gameTime)
+        {
+            float dt = (float)gameTime.TotalGameTime.TotalSeconds - m_animationStart;
+            int index = m_animations[m_currentState].GetFrameIndex(dt);
 
-            Animation run = new Animation(0.1f, true);
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/001"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/002"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/003"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/004"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/005"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/006"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/007"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/008"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/009"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/010"));
-            run.AddFrame(Game1.contentManager.Load<Texture2D>("Player/Run/011"));
-            m_run = new AnimationHandler(run);
+            return new BoundingBox(m_animations[m_currentState].GetAnimation().GetTexture(index), m_position);
         }
 
+
+        public Texture GetCurrentTexture(GameTime gameTime)
+        {
+            float dt = (float)gameTime.TotalGameTime.TotalSeconds - m_animationStart;
+            int index = m_animations[m_currentState].GetFrameIndex(dt);
+
+            return new Texture(m_animations[m_currentState].GetAnimation().GetTexture(index));
+        }
+
+
+        public void LoadStateLookup()
+        {
+            m_stateLookup[PlayerState.IDLE_LEFT, InputAction.LEFT] = PlayerState.RUN_LEFT;
+            m_stateLookup[PlayerState.IDLE_LEFT, InputAction.RIGHT] = PlayerState.IDLE_RIGHT;
+            m_stateLookup[PlayerState.IDLE_LEFT, InputAction.JUMP] = PlayerState.JUMP_LEFT;
+
+            m_stateLookup[PlayerState.IDLE_RIGHT, InputAction.LEFT] = PlayerState.IDLE_LEFT;
+            m_stateLookup[PlayerState.IDLE_RIGHT, InputAction.RIGHT] = PlayerState.RUN_RIGHT;
+            m_stateLookup[PlayerState.IDLE_RIGHT, InputAction.JUMP] = PlayerState.JUMP_RIGHT;
+
+            m_stateLookup[PlayerState.RUN_LEFT, InputAction.LEFT] = PlayerState.RUN_LEFT;
+            m_stateLookup[PlayerState.RUN_LEFT, InputAction.RIGHT] = PlayerState.IDLE_RIGHT;
+            m_stateLookup[PlayerState.RUN_LEFT, InputAction.JUMP] = PlayerState.JUMP_LEFT;
+
+            m_stateLookup[PlayerState.RUN_RIGHT, InputAction.LEFT] = PlayerState.IDLE_LEFT;
+            m_stateLookup[PlayerState.RUN_RIGHT, InputAction.RIGHT] = PlayerState.RUN_RIGHT;
+            m_stateLookup[PlayerState.RUN_RIGHT, InputAction.JUMP] = PlayerState.JUMP_RIGHT;
+
+            m_stateLookup[PlayerState.JUMP_LEFT, InputAction.LEFT] = PlayerState.JUMP_LEFT;
+            m_stateLookup[PlayerState.JUMP_LEFT, InputAction.RIGHT] = PlayerState.JUMP_LEFT;
+            m_stateLookup[PlayerState.JUMP_LEFT, InputAction.JUMP] = PlayerState.JUMP_LEFT;
+
+            m_stateLookup[PlayerState.JUMP_RIGHT, InputAction.LEFT] = PlayerState.JUMP_RIGHT;
+            m_stateLookup[PlayerState.JUMP_RIGHT, InputAction.RIGHT] = PlayerState.JUMP_RIGHT;
+            m_stateLookup[PlayerState.JUMP_RIGHT, InputAction.JUMP] = PlayerState.JUMP_RIGHT;
+
+            m_stateLookup[PlayerState.DEAD_LEFT, InputAction.LEFT] = PlayerState.DEAD_LEFT;
+            m_stateLookup[PlayerState.DEAD_LEFT, InputAction.RIGHT] = PlayerState.DEAD_LEFT;
+            m_stateLookup[PlayerState.DEAD_LEFT, InputAction.JUMP] = PlayerState.DEAD_LEFT;
+
+            m_stateLookup[PlayerState.DEAD_RIGHT, InputAction.LEFT] = PlayerState.DEAD_RIGHT;
+            m_stateLookup[PlayerState.DEAD_RIGHT, InputAction.RIGHT] = PlayerState.DEAD_RIGHT;
+            m_stateLookup[PlayerState.DEAD_RIGHT, InputAction.JUMP] = PlayerState.DEAD_RIGHT;
+        }
+          
+          
+        public void LoadAnimations()
+        {
+            Animation dead_left = new Animation(0.1f, true);
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/001_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/002_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/003_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/004_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/005_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/006_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/007_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/008_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/009_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/010_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/011_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/012_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/013_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/014_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/015_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/016_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/017_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/018_Left"));
+            dead_left.AddFrame(Texture.Create("Player/Dead_Left/019_Left"));          
+            m_animations[PlayerState.DEAD_LEFT] = new AnimationHandler(dead_left);
+
+            Animation dead_right = new Animation(0.1f, true);
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/001_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/002_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/003_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/004_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/005_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/006_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/007_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/008_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/009_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/010_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/011_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/012_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/013_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/014_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/015_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/016_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/017_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/018_Right"));
+            dead_right.AddFrame(Texture.Create("Player/Dead_Right/019_Right"));
+            m_animations[PlayerState.DEAD_RIGHT] = new AnimationHandler(dead_right);
+
+            Animation jump_left = new Animation(0.03f, false);
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/1_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/2_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/3_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/4_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/5_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/6_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/7_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/8_Left"));            
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/10_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/13_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/15_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/17_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/19_Left"));
+            jump_left.AddFrame(Texture.Create("Player/Jump_Left/21_Left"));
+            m_animations[PlayerState.JUMP_LEFT] = new AnimationHandler(jump_left);
+
+
+            Animation jump_right = new Animation(0.03f, false);
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/1_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/2_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/3_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/4_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/5_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/6_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/7_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/8_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/10_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/13_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/15_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/17_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/19_Right"));
+            jump_right.AddFrame(Texture.Create("Player/Jump_Right/21_Right"));
+            m_animations[PlayerState.JUMP_RIGHT] = new AnimationHandler(jump_right);
+
+
+            Animation idle_left = new Animation(0.1f, true);
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/001_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/002_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/003_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/004_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/005_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/006_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/007_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/008_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/009_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/010_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/011_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/012_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/013_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/014_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/015_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/016_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/017_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/018_Left"));
+            idle_left.AddFrame(Texture.Create("Player/Idle_Left/019_Left"));
+            m_animations[PlayerState.IDLE_LEFT] = new AnimationHandler(idle_left);
+
+            Animation idle_right = new Animation(0.1f, true);
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/001_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/002_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/003_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/004_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/005_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/006_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/007_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/008_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/009_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/010_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/011_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/012_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/013_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/014_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/015_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/016_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/017_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/018_Right"));
+            idle_right.AddFrame(Texture.Create("Player/Idle_Right/019_Right"));
+            m_animations[PlayerState.IDLE_RIGHT] = new AnimationHandler(idle_right);
+
+
+            Animation run_left = new Animation(0.1f, true);
+            run_left.AddFrame(Texture.Create("Player/Run_Left/001_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/002_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/003_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/004_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/005_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/006_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/007_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/008_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/009_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/010_Left"));
+            run_left.AddFrame(Texture.Create("Player/Run_Left/011_Left"));
+            m_animations[PlayerState.RUN_LEFT] = new AnimationHandler(run_left);
+
+            Animation run_right = new Animation(0.1f, true);
+            run_right.AddFrame(Texture.Create("Player/Run_Right/001_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/002_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/003_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/004_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/005_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/006_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/007_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/008_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/009_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/010_Right"));
+            run_right.AddFrame(Texture.Create("Player/Run_Right/011_Right"));
+            m_animations[PlayerState.RUN_RIGHT] = new AnimationHandler(run_right);
+        }
+
+
+        public void Restart(float currentTime)
+        {
+            m_animationStart = currentTime;
+        }
+
+
+        public bool AnimationPlaying(float currentTime)
+        {
+            bool isPlaying = false;
+            float dt = currentTime - m_animationStart;      
+            
+            switch (m_currentState)
+            {                
+                case PlayerState.DEAD_LEFT:
+                    if(dt > m_animations[PlayerState.DEAD_LEFT].TotalAnimationTime() )
+                    {              
+                        //TODO         
+                    }
+                    else
+                    {
+                        isPlaying = true;
+                    }
+                    break;
+
+                case PlayerState.DEAD_RIGHT:
+                    if(dt > m_animations[PlayerState.DEAD_RIGHT].TotalAnimationTime())
+                    {                       
+                        //TODO
+                    }
+                    else
+                    {
+                        isPlaying = true;
+                    }
+                    break;
+
+                case PlayerState.JUMP_LEFT:
+                    if (dt > m_animations[PlayerState.JUMP_LEFT].TotalAnimationTime())
+                    {                                              
+                        SetState(PlayerState.IDLE_LEFT, currentTime);
+                        jumpEmitter.SetEnabled(false);
+                    }
+                    else
+                    {
+                        isPlaying = true;
+                    }
+                    break;
+
+                case PlayerState.JUMP_RIGHT:
+                    if (dt > m_animations[PlayerState.JUMP_RIGHT].TotalAnimationTime())
+                    {                                            
+                        SetState(PlayerState.IDLE_RIGHT, currentTime);
+                        jumpEmitter.SetEnabled(false);
+                    }
+                    else
+                    {
+                        isPlaying = true;
+                    }
+                    break;
+                default:                   
+                    break;
+            }
+
+            return isPlaying;
+        }
+
+
+        public void SetState(int newState, float currentTime)
+        {
+            if(m_currentState != newState)
+            {
+                m_currentState = newState;
+                Restart(currentTime);
+            }
+        }
 
 
         public void Update(GameTime gameTime)
         {
-            timeElapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            deadTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            float currentTime = (float)gameTime.TotalGameTime.TotalSeconds;
 
-            if (m_current == m_jump)
-            {
-                if(timeElapsed > m_jump.GetAnimation().GetFrameCount() * m_jump.GetAnimation().GetFrameTime())
-                {
-                    m_current = m_idle;
-                    m_current.Restart();
-                    timeElapsed = 0;
-                }
-            }
+            //Check1:
+            //If still jumping or still dying
+            //Keep playing that animation don't check input
+            //Check2:
+            //If not busy with an animation
+            //Check our inputs, perform lookup and get the new state           
+            //Check3:
+            //If no input we are idle in the left or right direction
+            //If we were in a right state then we are idling right
+            //If we were in a left state then we are idling left
 
-            if(m_current == m_dead)
-            {
-                if(deadTime > m_dead.GetAnimation().GetFrameCount()*m_dead.GetAnimation().GetFrameTime())
-                {
-                    m_current = m_dead;
-                    m_current.Restart();
-                    deadTime = 0;
-                }
-            }
 
-            if(m_current != m_jump || m_current != m_dead)
+            //Only do the following if not jumping or dying            
+            if(!AnimationPlaying(currentTime))
             {
-                if(Game1.inputHandler.KeyPressed(Keys.K))
+                if (Game1.inputHandler.KeyDown(Keys.A))
                 {
-                    m_current = m_dead;
-                    m_current.Restart();
-                    deadTime = 0;
-                }
-                if (Game1.inputHandler.KeyPressed(Keys.Space))
-                {
-                    m_current = m_jump;
-                    m_current.Restart();
-                    timeElapsed = 0;
+                    SetState(m_stateLookup[m_currentState, InputAction.LEFT], currentTime);
                 }
                 else if (Game1.inputHandler.KeyDown(Keys.D))
                 {
-                    if(m_current != m_run)
-                    {
-                        m_current = m_run;
-                        m_current.Restart();
-                    }
+                    SetState(m_stateLookup[m_currentState, InputAction.RIGHT], currentTime);
+                }
+                else if (m_currentState < 4)
+                {
+                    SetState(PlayerState.IDLE_RIGHT, currentTime);
                 }
                 else
                 {
-                    if(m_current != m_idle)
-                    {
-                        m_current = m_idle;
-                        m_current.Restart();
-                    }
- 
+                    SetState(PlayerState.IDLE_LEFT, currentTime);    
                 }
             }
+
+            if (Game1.inputHandler.KeyDown(Keys.A))
+            {
+                m_velocity += new Vector2(-3.5f, 0);
+            }
+            else if (Game1.inputHandler.KeyDown(Keys.D))
+            {
+                m_velocity += new Vector2(3.5f, 0);
+            }
+
+            //So you can jump while running
+            if (m_currentState != PlayerState.JUMP_RIGHT && m_currentState != PlayerState.JUMP_RIGHT && Game1.inputHandler.KeyPressed(Keys.Space))
+            {
+                jumpEmitter.SetEnabled(true);
+                m_velocity += new Vector2(0, -35.0f);
+                SetState(m_stateLookup[m_currentState, InputAction.JUMP], currentTime);
+            }
+            jumpEmitter.SetEmitterLocation(new Vector2(m_position.X + (m_animations[m_currentState].GetAnimation().GetFrameWidth() /2), m_position.Y + m_animations[m_currentState].GetAnimation().GetFrameHeight()));
+            jumpEmitter.Update();
         }
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, SpriteEffects spriteEffects)
+
+        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, SpriteEffects spriteEffects, Camera camera)
         {
-            m_current.Draw(gameTime, spriteBatch, m_position, spriteEffects, 1f);
+            float dt = (float)gameTime.TotalGameTime.TotalSeconds - m_animationStart;
+            
+            m_animations[m_currentState].Draw(dt, spriteBatch, m_position - camera.m_position, spriteEffects, 1f);
+            jumpEmitter.Draw(spriteBatch, camera);
         }    
 
     }

@@ -9,15 +9,13 @@ using System.Threading.Tasks;
 namespace _2DGame
 {
     //Controls the playback of an animation.
-    class AnimationHandler
+    public class AnimationHandler
     {
         private Animation m_animation;
-        private float m_time;
 
         public AnimationHandler(Animation animation)
         {
             m_animation = animation;
-            m_time = 0.0f;
         }
 
         public Vector2 GetOrigin()
@@ -25,9 +23,9 @@ namespace _2DGame
             return new Vector2(m_animation.GetFrameWidth() / 2.0f, m_animation.GetFrameHeight());
         }
 
-        public void Restart()
+        public float TotalAnimationTime()
         {
-            m_time = 0;
+            return m_animation.GetFrameTime() * m_animation.GetFrameCount();
         }
 
         //Gets the animation currently playing
@@ -36,29 +34,26 @@ namespace _2DGame
             return m_animation;
         }
 
-        public int GetFrameIndex()
+        public int GetFrameIndex(float dt)
         {
             if(m_animation.IsLooping())
             {
-                return (int)((m_time / m_animation.GetFrameTime()) % m_animation.GetFrameCount());
+                return (int)((dt / m_animation.GetFrameTime()) % m_animation.GetFrameCount());
             }
             else
             {
-                return Math.Min((int)(m_time / m_animation.GetFrameTime()), m_animation.GetFrameCount() - 1);
+                return Math.Min((int)(dt / m_animation.GetFrameTime()), m_animation.GetFrameCount() - 1);
             }
         } 
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch, Vector2 position, SpriteEffects spriteEffects, float scale)
+        public void Draw(float dt, SpriteBatch spriteBatch, Vector2 position, SpriteEffects spriteEffects, float scale)
         {
             if (m_animation == null)
             {
-                throw new NotSupportedException("No animation is currently linked to this handler.");
+                throw new Exception("No animation is currently linked to this handler.");
             }
-
-            //Process time passing
-            m_time += (float)gameTime.ElapsedGameTime.TotalSeconds;
                     
-            spriteBatch.Draw(m_animation.GetTexture(GetFrameIndex()), position, null, Color.White, 0, new Vector2(0, 0), scale, spriteEffects, 0);           
+            spriteBatch.Draw(m_animation.GetTexture(GetFrameIndex(dt)), position, null, Color.White, 0, new Vector2(0, 0), scale, spriteEffects, 0);           
         }
 
     }

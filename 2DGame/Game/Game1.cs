@@ -7,130 +7,133 @@ using System.Collections.Generic;
 
 namespace _2DGame
 {
-    /// <summary>
-    /// This is the main type for your game.
-    /// </summary>
+
     public class Game1 : Game
     {
+        public Camera camera;
+
+        public static bool fullScreen;
         public static GraphicsDevice graphicsDevice;
         public static ContentManager contentManager;
         public static InputHandler inputHandler;
         GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;
         SpriteEffects spriteEffects;
-        Player p;
 
+        DarkForest df_level;
         
-        Vector2 lastPos;
-        int count = 0;
-        ParticleEngine particleEngine;
-
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             contentManager = Content;
             contentManager.RootDirectory = "Content";
-            inputHandler = new InputHandler();
+            inputHandler = new InputHandler();           
         }
 
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
+
+        public void ToggleFullScreen()
+        {
+            if(fullScreen)
+            {
+                graphics.PreferredBackBufferWidth = 1024;
+                graphics.PreferredBackBufferHeight = 728;
+                graphics.IsFullScreen = false;
+                fullScreen = false;
+            }
+            else
+            {
+                graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
+                graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
+                graphics.IsFullScreen = true;
+                fullScreen = true;
+            }
+
+            graphics.ApplyChanges();
+        }
+
+
         protected override void Initialize()
         {
             base.Initialize();
             graphicsDevice = GraphicsDevice;
-            graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
-            graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
-            graphics.IsFullScreen = false;
-            graphics.ApplyChanges();
-
-            // TODO: Add your initialization logic here
-            List<Texture2D> particles = new List<Texture2D>();
-            particles.Add(Content.Load<Texture2D>("Particles/magicparticle"));
-            particles.Add(Content.Load<Texture2D>("Particles/whiteglow"));
-            particles.Add(Content.Load<Texture2D>("Particles/blueglow"));
-            particleEngine = new ParticleEngine(particles, new Vector2(100f,100f),1);           
-           
-            lastPos = new Vector2(50f, 50f);
-
-            p = new Player();
-            
+            fullScreen = false;
+            camera = new Camera(new Vector2(0, 0), 20);
+            df_level = new DarkForest(camera);
         }
 
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
+
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            spriteEffects = new SpriteEffects();    
-                  
-            
-            
-            // TODO: use this.Content to load your game content here
+            spriteEffects = new SpriteEffects();                                             
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// game-specific content.
-        /// </summary>
+
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+
         protected override void Update(GameTime gameTime)
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+        {         
 
-            inputHandler.Update();
-
-            if(inputHandler.GamePadLTPressed())
+            inputHandler.Update();        
+                         
+            if(inputHandler.KeyPressed(Keys.F11))
             {
-                count++;
-                Console.WriteLine("pressed " + count);
+                ToggleFullScreen();
             }
 
-            lastPos += inputHandler.GetLeftTS()*2;
-
-            // TODO: Add your update logic here
-
-            particleEngine.m_emitterLocation = new Vector2(Mouse.GetState().X, Mouse.GetState().Y);
-            particleEngine.Update();
-
-            p.Update(gameTime);
+            df_level.Update(gameTime);
 
             base.Update(gameTime);
         }
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        public void UpdateViewport(Player player)
+        {
+            float spriteWidth = 120;
+            float spriteHeight = 150;
+            float width = graphicsDevice.PresentationParameters.BackBufferWidth;
+            float height = graphicsDevice.PresentationParameters.BackBufferHeight;
+
+            float leftMargin = camera.m_position.X + camera.m_margin;
+            float rightMargin = camera.m_position.X + width - camera.m_margin;
+
+            float topMargin = camera.m_position.Y + camera.m_margin;
+            float bottomMargin = camera.m_position.Y + height - camera.m_margin;
+
+            if (player.m_position.X < leftMargin)
+            {
+                camera.m_position.X = player.m_position.X - camera.m_margin;
+            }
+            if(player.m_position.X + spriteWidth > rightMargin)
+            {
+                camera.m_position.X = player.m_position.X  + spriteWidth - width + camera.m_margin;
+            }
+            if(player.m_position.Y < topMargin)
+            {
+                camera.m_position.Y = player.m_position.Y - camera.m_margin;
+            }
+            if(player.m_position.Y + spriteHeight > bottomMargin)
+            {
+                camera.m_position.Y = player.m_position.Y + spriteHeight - height + camera.m_margin;
+            }
+
+        }
+
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);          
+            GraphicsDevice.Clear(Color.Black);
+            UpdateViewport(df_level.player);
 
             spriteBatch.Begin();
 
-            p.Draw(gameTime, spriteBatch, spriteEffects);
+            df_level.Draw(gameTime, spriteBatch, spriteEffects, camera);
 
             spriteBatch.End();
-
-            // TODO: Add your drawing code here
-            particleEngine.Draw(spriteBatch);
+          
             base.Draw(gameTime);
         }
     }

@@ -43,15 +43,22 @@
   <ItemGroup>
     <Compile Include="Game\Animation\Animation.cs" />
     <Compile Include="Game\Animation\AnimationHandler.cs" />
+    <Compile Include="Game\Camera.cs" />
     <Compile Include="Game\Collisions\BoundingBox.cs" />
     <Compile Include="Game\Game1.cs" />
+    <Compile Include="Game\Levels\DarkForest.cs" />
+    <Compile Include="Game\Levels\Level.cs" />
     <Compile Include="Game\Managers\InputHandler.cs" />
     <Compile Include="Game\Collisions\Line.cs" />
     <Compile Include="Game\Particles\Particle.cs" />
     <Compile Include="Game\Particles\ParticleEngine.cs" />
+    <Compile Include="Game\Level Assets\BackgroundImage.cs" />
+    <Compile Include="Game\Level Assets\MovingPlatform.cs" />
+    <Compile Include="Game\Level Assets\Platform.cs" />
     <Compile Include="Game\Player.cs" />
     <Compile Include="Game\Program.cs" />
     <Compile Include="Game\Animation\TextureReel.cs" />
+    <Compile Include="Game\Texture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +66,7 @@
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>

@@ -10,7 +10,7 @@ namespace _2DGame
 {
     class Particle
     {
-        public Texture2D m_texture { get; set; }
+        public Texture m_texture { get; set; }
         public Vector2 m_position { get; set; }
         public Vector2 m_velocity { get; set; }
         public float m_angle { get; set; }
@@ -20,7 +20,7 @@ namespace _2DGame
         public int m_ttl { get; set; }
         public int m_numStages;
 
-        public Particle(Texture2D texture, Vector2 position, Vector2 velocity, float angle, float angularVelocity, Color color, float size, int ttl, int numStages)
+        public Particle(Texture texture, Vector2 position, Vector2 velocity, float angle, float angularVelocity, Color color, float size, int ttl, int numStages)
         {
             m_texture = texture;
             m_position = position;
@@ -40,11 +40,11 @@ namespace _2DGame
             m_angle += m_angularVelocity;
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, Camera camera)
         {
             Rectangle sourceRect = new Rectangle(0, 0, m_texture.Width, m_texture.Height);
             Vector2 origin = new Vector2(m_texture.Width / 2, m_texture.Height / 2);
-            spriteBatch.Draw(m_texture, m_position, sourceRect, m_color, m_angle, origin, m_size, SpriteEffects.None, 0f);
+            spriteBatch.Draw(m_texture, m_position - camera.m_position, sourceRect, m_color, m_angle, origin, m_size, SpriteEffects.None, 0f);
         }
     }
 }

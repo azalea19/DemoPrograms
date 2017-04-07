@@ -10,19 +10,19 @@ namespace _2DGame
 {
     class TextureReel
     {
-        private List<Texture2D> m_textures;
+        private List<Texture> m_textures;
 
         public TextureReel()
         {          
-            m_textures = new List<Texture2D>();
+            m_textures = new List<Texture>();
         }
 
-        public TextureReel(Texture2D reel)
+        public TextureReel(Texture reel)
         {
             m_textures = SplitTexture(reel);
         }
 
-        public void AddTexture(Texture2D texture)
+        public void AddTexture(Texture texture)
         {
             m_textures.Add(texture);
         }
@@ -50,15 +50,15 @@ namespace _2DGame
             return m_textures[0].Height;
         }
 
-        public Texture2D GetTexture(int index)
+        public Texture GetTexture(int index)
         {
             return m_textures[index];
         }
 
-        private List<Texture2D> SplitTexture(Texture2D reel)
+        private List<Texture> SplitTexture(Texture reel)
         {
-            List<Texture2D> newList;
-            newList = new List<Texture2D>(reel.Width / reel.Height);     
+            List<Texture> newList;
+            newList = new List<Texture>(reel.Width / reel.Height);     
 
             for (int i = 0; i < newList.Capacity; i++)
             {
@@ -70,12 +70,9 @@ namespace _2DGame
                 Game1.spriteBatch.Draw(reel, new Rectangle(0, 0, reel.Height, reel.Height), new Rectangle(i * reel.Height, 0, reel.Height, reel.Height), Color.White);
                 Game1.spriteBatch.End();
                 Game1.graphicsDevice.SetRenderTarget(null);
-                Texture2D newTex = (Texture2D)newTarget;
+                Texture newTex = new Texture((Texture2D)newTarget);
                 newList.Add(newTex);
             }
-
-            
-
             return newList;
         }
 
