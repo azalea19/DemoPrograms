@@ -46,6 +46,8 @@
     <Compile Include="Game\Camera.cs" />
     <Compile Include="Game\Collisions\BoundingBox.cs" />
     <Compile Include="Game\Game1.cs" />
+    <Compile Include="Game\Level Assets\Crystal.cs" />
+    <Compile Include="Game\Level Assets\Spikes.cs" />
     <Compile Include="Game\Levels\DarkForest.cs" />
     <Compile Include="Game\Levels\Level.cs" />
     <Compile Include="Game\Managers\InputHandler.cs" />

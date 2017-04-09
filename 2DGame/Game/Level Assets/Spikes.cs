@@ -8,24 +8,15 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
-    class Platform
+    class Spikes
     {
         public Texture m_texture;
         public Vector2 m_position;
-        public bool isMoving;
-        public Vector2 changeInPos;
 
-        public Platform(Texture texture, Vector2 position)
+        public Spikes(Texture texture, Vector2 position)
         {
             m_texture = texture;
             m_position = position;
-            isMoving = false;
-            changeInPos = new Vector2(0, 0);
-        }
-
-        public virtual void Update(GameTime gameTime)
-        {
-
         }
 
         public void Draw(SpriteBatch spriteBatch, Camera camera)
@@ -33,16 +24,6 @@ namespace _2DGame
             Rectangle sourceRect = new Rectangle(0, 0, m_texture.Width, m_texture.Height);
             Vector2 origin = new Vector2(m_texture.Width / 2, m_texture.Height / 2);
             spriteBatch.Draw(m_texture, m_position - camera.m_position, sourceRect, Color.White);
-        }
-
-        public Texture GetTexture()
-        {
-            return m_texture;
-        }
-
-        public BoundingBox GetBoundingBox()
-        {
-            return new BoundingBox(new Vector2(m_texture.Width, m_texture.Height), m_position);
         }
     }
 }

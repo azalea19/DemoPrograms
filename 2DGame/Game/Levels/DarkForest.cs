@@ -11,8 +11,8 @@ namespace _2DGame
     class DarkForest : Level
     {
         List<Texture> particles;
-//         List<Crystal> crystals;
-//         List<Spikes> spikes;
+        List<Crystal> crystals;
+        List<Spikes> spikes;
         public Player player;
         public Camera camera;
 
