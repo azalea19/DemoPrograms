@@ -14,7 +14,7 @@ namespace _2DGame
         private KeyboardState currentKeyboardState;
 
         private MouseState lastMouse;
-        public MouseState currentMouse;
+        private MouseState currentMouse;
 
         private int mouseDeltaX;
         private int mouseDeltaY;

@@ -394,3 +394,6 @@ D:\UserFiles\Desktop\DemoPrograms\2DGame\bin\Windows\x86\Debug\Content\Platforms
 D:\UserFiles\Desktop\DemoPrograms\2DGame\bin\Windows\x86\Debug\Content\Platforms\DarkForest\s_13.xnb
 D:\UserFiles\Desktop\DemoPrograms\2DGame\bin\Windows\x86\Debug\Content\Platforms\DarkForest\tbg_3.xnb
 D:\UserFiles\Desktop\DemoPrograms\2DGame\bin\Windows\x86\Debug\Content\Platforms\DarkForest\tbg_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\obj\x86\Debug\2DGame.exe
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\obj\x86\Debug\2DGame.pdb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\obj\x86\Debug\2DGame.csprojResolveAssemblyReference.cache

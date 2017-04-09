@@ -10,61 +10,178 @@ namespace _2DGame
 {
     class DarkForest : Level
     {
-        List<Texture> particles = new List<Texture>();
-      
+        List<Texture> particles;
+//         List<Crystal> crystals;
+//         List<Spikes> spikes;
         public Player player;
         public Camera camera;
+
+        List<BackgroundImage> background;
+        List<BackgroundImage> middleground;
+        List<BackgroundImage> foreground;
+        List<Texture> trees;
 
         public DarkForest(Camera cam)
         {
             camera = cam;
-            Initialise();
-            
+            Initialise();          
         }
 
         public override void Initialise()
         {
-            player = new Player(new Vector2(100, 0));                     
-                     
-            Platform tile;
-            MovingPlatform plat1;
-            BackgroundImage bg;
-            BackgroundImage flowers;
-            BackgroundImage tree1;
-            BackgroundImage tree2;
-            BackgroundImage glowflow1;
+            Random r = new Random();
+
+            background = new List<BackgroundImage>();
+            middleground = new List<BackgroundImage>();
+            foreground = new List<BackgroundImage>();
+            trees = new List<Texture>();
+            particles = new List<Texture>();
+            crystals = new List<Crystal>();
+            spikes = new List<Spikes>();
 
             Texture ledge = Texture.Create("DarkForest/Platforms/tbg_3");
-            Texture forestbg = Texture.Create("DarkForest/Background/tbg_1");
-            Texture flowerhang = Texture.Create("DarkForest/Background/tbg_2");
-            Texture gnarlytree = Texture.Create("DarkForest/Trees/s_2");
-            Texture lilgnarlytree = Texture.Create("DarkForest/Trees/s_6");
-            Texture glowflower = Texture.Create("DarkForest/Trees/s_1");
-            Texture longPlat = Texture.Create("DarkForest/Platforms/s_12");
+            Texture forestBackground = Texture.Create("DarkForest/Background/tbg_1");
+            Texture flowerHangMiddle = Texture.Create("DarkForest/Background/tbg_2");
+            Texture bigGnarlyTree = Texture.Create("DarkForest/Trees/s_2");
+            Texture littleGrarlyTree = Texture.Create("DarkForest/Trees/s_6");
+            Texture glowFlower = Texture.Create("DarkForest/Trees/s_1");
+            Texture longPlatform = Texture.Create("DarkForest/Platforms/s_12");
+            Texture treeBlock = Texture.Create("DarkForest/Trees/s_5");
+            Texture rightRamp = Texture.Create("DarkForest/Platforms/s_13");
+            Texture rampFlowerOverHang = Texture.Create("DarkForest/Background/s_16");
+            Texture twistedTree = Texture.Create("DarkForest/Trees/s_3");
+            Texture branchedTree = Texture.Create("DarkForest/Trees/s_4");
+            Texture littlePlatform = Texture.Create("DarkForest/Platforms/s_11");
+            Texture sideSpikes = Texture.Create("DarkForest/Crystals/s_21");
+            Texture endFlowerOverHang = Texture.Create("DarkForest/Background/tbg_2_end");
+            Texture endLedge = Texture.Create("DarkForest/Platforms/tbg_3_end");
+            Texture bigSpikes = Texture.Create("DarkForest/Crystals/s_7");
+            Texture spikeMound = Texture.Create("DarkForest/Crystals/spikeMound");
+            Texture spikeRun = Texture.Create("DarkForest/Crystals/spikeRun");
+            Texture middlePlatform = Texture.Create("DarkForest/Platforms/s_10");
+            Texture spikeLedge = Texture.Create("DarkForest/Platforms/tbg_4");
 
-            for (int k=0; k < 10; k++)
-            {
-                bg = new BackgroundImage(forestbg, new Vector2(k * forestbg.Width, -512)); 
-                tile = new Platform(ledge, new Vector2(k*ledge.Width, 0));               
-                m_platforms.Add(tile);
-                m_images.Add(bg);                             
+            Texture rockBlock = Texture.Create("MagicForest/Platforms/rockBlock");
+            Texture middleRock = Texture.Create("MagicForest/Platforms/tbg_10");
+            Texture rockBlockRight = Texture.Create("MagicForest/Platforms/rockBlockRight");
+            Texture magicPlatform = Texture.Create("MagicForest/Platforms/s_1_noS");
+            Texture leftWisp = Texture.Create("MagicForest/Platforms/s_9");
+            Texture rightWisp = Texture.Create("MagicForest/Platforms/s_7");
+            Texture middleLedge = Texture.Create("MagicForest/Platforms/tbg_4");
+            Texture crystalHang = Texture.Create("MagicForest/Background/tbg_1");
+
+
+            trees.Add(littleGrarlyTree);
+            trees.Add(bigGnarlyTree);
+            trees.Add(treeBlock);
+            trees.Add(twistedTree);
+            trees.Add(branchedTree);
+
+            //Tiled images in background
+            Platform ledgeTile;
+
+            //Tile images in foreground
+            BackgroundImage overhangFlowers;
+            BackgroundImage rampFlower;
+            
+
+            int length = 20;
+
+            player = new Player(new Vector2(100, 0));
+
+            //Add all the background images
+            for (int k= 0; k < length; k++)
+            {                                                          
+                background.Add(new BackgroundImage(forestBackground, new Vector2(k * forestBackground.Width, -512)));                             
             }
-            tree1 = new BackgroundImage(gnarlytree, new Vector2(0, -512));
-            tree2 = new BackgroundImage(lilgnarlytree, new Vector2(1024, -512));
-            glowflow1 = new BackgroundImage(glowflower, new Vector2(0, 0 - 190));
-            m_images.Add(tree1);
-            m_images.Add(tree2);
-            m_images.Add(glowflow1);
 
-            for (int j =0; j < 10; j++)
+            //Add all the middleground images
+            //Add ledges and trees
+            for (int k = 0; k < length; k++)
             {
-                flowers = new BackgroundImage(flowerhang, new Vector2(j * flowerhang.Width, -512 - 180));                        
-                m_images.Add(flowers);
+                ledgeTile = new Platform(ledge, new Vector2(k * ledge.Width, 0));
+                if (k == length - 6)
+                {
+                    ledgeTile = new Platform(spikeLedge, new Vector2(k * ledge.Width, 0));
+                }
+                if (k == length - 4)
+                {
+                    ledgeTile = new Platform(spikeLedge, new Vector2(k * ledge.Width, 0));
+                }
+
+                if (k == length-1)
+                {
+                    ledgeTile = new Platform(endLedge, new Vector2(k * ledge.Width, 0));
+                }
+                m_platforms.Add(ledgeTile);               
             }
 
-            plat1 = new MovingPlatform(longPlat, new Vector2(512, -256), new Vector2(1024, -256), 5);
-            m_platforms.Add(plat1);
-            camera.SetPosition(new Vector2(-50, -800));      
+            for(int k=0; k < length; k++)
+            {
+                if(k < length-1)
+                {
+                    //Generate trees for the middle ground
+                    middleground.Add(new BackgroundImage(trees[r.Next(0, trees.Count)], new Vector2(k * 512 + 512, -512)));                
+                }             
+            }
+
+            //Add all the foreground images
+            for (int j = 0; j < length; j++)
+            {
+                overhangFlowers = new BackgroundImage(flowerHangMiddle, new Vector2(j * flowerHangMiddle.Width, -512 - 180));
+                if(j == length -1)
+                {
+                    overhangFlowers = new BackgroundImage(endFlowerOverHang, new Vector2(j * flowerHangMiddle.Width, -512 - 180));
+                }
+                foreground.Add(overhangFlowers);
+            }
+            for(int j=0; j < length; j++)
+            {
+                rampFlower = new BackgroundImage(rampFlowerOverHang, new Vector2( (512 * length) + (2 * 512 * j), -512 -180));
+            }
+
+            crystals.Add(new Crystal(new Vector2(865, -405), new Vector2(865, -395), 2));
+            m_platforms.Add(new Platform(treeBlock, new Vector2(0, -512)));
+            m_platforms.Add(new MovingPlatform(longPlatform, new Vector2(512, -256), new Vector2(1024, -256), 5));
+            camera.SetPosition(new Vector2(-50, -600));
+
+            spikes.Add(new Spikes(bigSpikes, new Vector2(1901,-120)));
+            spikes.Add(new Spikes(bigSpikes, new Vector2(2930, -120)));
+            spikes.Add(new Spikes(spikeMound, new Vector2(4224, -245)));
+            spikes.Add(new Spikes(spikeRun, new Vector2(6000, -120)));
+
+            m_platforms.Add(new MovingPlatform(littlePlatform, new Vector2(5517, -90), new Vector2(5532, -320), 3));
+            m_platforms.Add(new Platform(littlePlatform, new Vector2(5866, -320)));
+            
+            crystals.Add(new Crystal(new Vector2(6198, -425), new Vector2(6198, -455),2));
+            m_platforms.Add(new Platform(littlePlatform, new Vector2(6180, -271)));
+            m_platforms.Add(new Platform(middlePlatform, new Vector2(4243, -236)));
+            m_platforms.Add(new Platform(longPlatform, new Vector2(6496, -271)));
+
+            crystals.Add(new Crystal(new Vector2(6622, -425), new Vector2(6622, -455), 2));
+            crystals.Add(new Crystal(new Vector2(6863, -425), new Vector2(6863, -455), 2));
+            spikes.Add(new Spikes(bigSpikes, new Vector2(7359, 52)));
+            spikes.Add(new Spikes(bigSpikes, new Vector2(8382, 52)));
+
+            foreground.Add(new BackgroundImage(rockBlock, new Vector2(9900,-512-180)));
+            foreground.Add(new BackgroundImage(middleRock, new Vector2(10749,-512-180)));
+            foreground.Add(new BackgroundImage(middleRock, new Vector2(11261, -512 - 180)));
+            foreground.Add(new BackgroundImage(rockBlockRight, new Vector2(11773,-512-180)));
+            foreground.Add(new BackgroundImage(crystalHang, new Vector2(12606, -512 - 180)));
+
+            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(10488, 205), new Vector2(10714, 205), 5));
+            m_platforms.Add(new Platform(magicPlatform, new Vector2(10405, -122)));
+
+            crystals.Add(new Crystal(new Vector2(10496, 65), new Vector2(10496, 122), 2));
+            crystals.Add(new Crystal(new Vector2(10657, 65), new Vector2(10657, 122), 2));
+
+            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(11240, 116), new Vector2(10999, 116), 5));
+
+            crystals.Add(new Crystal(new Vector2(11166, 22), new Vector2(11166, 31), 2));
+            crystals.Add(new Crystal(new Vector2(11311, 22), new Vector2(11311, 31), 2));
+
+            m_platforms.Add(new Platform(leftWisp, new Vector2(11843, 0)));
+            m_platforms.Add(new Platform(middleLedge, new Vector2(12355,0)));
         }
 
         public Vector2 ImageToWorldSpace(Vector2 imagePosition, Vector2 worldPosition)
@@ -152,7 +269,14 @@ namespace _2DGame
                 if (BoundingBox.Intersects(pb, temp))
                 {
                     if (PixelCollision(player.GetCurrentTexture(gameTime), player.m_position, m_platforms[i].GetTexture(), m_platforms[i].m_position))
+                    {
+                        if (m_platforms[i].isMoving)
+                        {
+                            player.m_position += m_platforms[i].changeInPos;
+                        }
+
                         return true;
+                    }
                 }
             }
 
@@ -164,6 +288,10 @@ namespace _2DGame
             for (int j = 0; j < m_platforms.Count; j++)
             {
                 m_platforms[j].Update(gameTime);
+            }
+            for(int j=0; j < crystals.Count; j++)
+            {
+                crystals[j].Update(gameTime);
             }
 
             player.Update(gameTime);          
@@ -366,14 +494,38 @@ namespace _2DGame
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, SpriteEffects spriteEffects, Camera camera)
         {          
-            for(int i =0; i < m_images.Count; i++)
+            for(int i =0; i < background.Count; i++)
             {
-                m_images[i].Draw(spriteBatch, camera);
+                background[i].Draw(spriteBatch, camera);
             }
-            for(int j =0; j < m_platforms.Count; j++)
+
+            for (int i = 0; i < middleground.Count; i++)
+            {
+                middleground[i].Draw(spriteBatch, camera);
+            }
+            
+
+            for (int j = 0; j < m_platforms.Count; j++)
             {
                 m_platforms[j].Draw(spriteBatch, camera);
             }
+            for(int i=0; i< spikes.Count; i++)
+            {
+                spikes[i].Draw(spriteBatch, camera);
+            }
+
+            for (int i = 0; i < crystals.Count; i++)
+            {
+                crystals[i].Draw(spriteBatch, camera);
+            }
+
+            for (int i= 0; i < foreground.Count; i++)
+            {
+                foreground[i].Draw(spriteBatch, camera);
+            }
+
+
+
             player.Draw(gameTime, spriteBatch, spriteEffects, camera);          
         }
 

@@ -401,7 +401,7 @@ namespace _2DGame
             }
 
             //So you can jump while running
-            if (m_currentState != PlayerState.JUMP_RIGHT && m_currentState != PlayerState.JUMP_RIGHT && Game1.inputHandler.KeyPressed(Keys.Space))
+            if (m_currentState != PlayerState.JUMP_RIGHT && m_currentState != PlayerState.JUMP_LEFT && Game1.inputHandler.KeyPressed(Keys.Space))
             {
                 jumpEmitter.SetEnabled(true);
                 m_velocity += new Vector2(0, -35.0f);
