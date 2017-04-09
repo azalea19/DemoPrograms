@@ -35,7 +35,7 @@ namespace _2DGame
             {
                 //We are still moving from start pos to end pos
                 m_position = Vector2.Lerp(m_startPos, m_endPos, m_timer/m_tripTime);
-                changeInPos = oldPos - m_position;
+                changeInPos = m_position - oldPos;
             }
             else
             {

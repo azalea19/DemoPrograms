@@ -60,6 +60,7 @@ namespace _2DGame
             Texture spikeRun = Texture.Create("DarkForest/Crystals/spikeRun");
             Texture middlePlatform = Texture.Create("DarkForest/Platforms/s_10");
             Texture spikeLedge = Texture.Create("DarkForest/Platforms/tbg_4");
+            Texture middleHangFlowerFlip = Texture.Create("DarkForest/Background/tbg_2_flip");
 
             Texture rockBlock = Texture.Create("MagicForest/rockBlock");
             Texture middleRock = Texture.Create("MagicForest/tbg_10");
@@ -69,7 +70,9 @@ namespace _2DGame
             Texture rightWisp = Texture.Create("MagicForest/s_7");
             Texture middleLedge = Texture.Create("MagicForest/tbg_4");
             Texture crystalHang = Texture.Create("MagicForest/tbg_1");
-
+            Texture magicForest = Texture.Create("MagicForest/tbg_2");
+            Texture rockwall = Texture.Create("MagicForest/tbg_9");
+            Texture greenHangMiddle = Texture.Create("MagicForest/tbg_13");
 
             trees.Add(littleGrarlyTree);
             trees.Add(bigGnarlyTree);
@@ -167,7 +170,7 @@ namespace _2DGame
             foreground.Add(new BackgroundImage(middleRock, new Vector2(10749,-512-180)));
             foreground.Add(new BackgroundImage(middleRock, new Vector2(11261, -512 - 180)));
             foreground.Add(new BackgroundImage(rockBlockRight, new Vector2(11773,-512-180)));
-            foreground.Add(new BackgroundImage(crystalHang, new Vector2(12606, -512 - 180)));
+            foreground.Add(new BackgroundImage(crystalHang, new Vector2(12594, -705)));
 
             m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(10488, 205), new Vector2(10714, 205), 5));
             m_platforms.Add(new Platform(magicPlatform, new Vector2(10405, -122)));
@@ -182,6 +185,29 @@ namespace _2DGame
 
             m_platforms.Add(new Platform(leftWisp, new Vector2(11843, 0)));
             m_platforms.Add(new Platform(middleLedge, new Vector2(12355,0)));
+
+            for(int i =0; i < length; i++)
+            {
+                foreground.Add(new BackgroundImage(middleHangFlowerFlip, new Vector2(512 * i + 200, -803)));
+            }
+            for(int i=0; i < length; i++)
+            {
+                foreground.Add(new BackgroundImage(middleHangFlowerFlip, new Vector2(512 * i, -803)));               
+            }
+            for (int i = 0; i < length; i++)
+            {
+                foreground.Add(new BackgroundImage(middleHangFlowerFlip, new Vector2(512 * i + 200, -900)));
+            }
+            for (int i = 0; i < length; i++)
+            {
+                foreground.Add(new BackgroundImage(flowerHangMiddle, new Vector2(512 * i, -950)));
+            }
+            for (int i = 0; i < length; i++)
+            {
+                foreground.Add(new BackgroundImage(middleHangFlowerFlip, new Vector2(512 * i, -1000)));
+            }
+
+            foreground.Add(new BackgroundImage(crystalHang, new Vector2(12355,-512-180)));
         }
 
         public Vector2 ImageToWorldSpace(Vector2 imagePosition, Vector2 worldPosition)

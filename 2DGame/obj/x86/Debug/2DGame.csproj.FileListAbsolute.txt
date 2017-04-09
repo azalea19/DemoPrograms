@@ -704,3 +704,5 @@ D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\Ma
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_9.xnb
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\pixel.xnb
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\arial.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_13.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\tbg_2_flip.xnb
