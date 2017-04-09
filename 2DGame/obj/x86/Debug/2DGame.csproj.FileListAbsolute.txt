@@ -651,3 +651,56 @@ D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\SharpDX.Di
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\SharpDX.XInput.xml
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\s_15.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\s_2 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\s_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\s_3 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\s_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\s_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\s_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\s_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Background\tbg_2_end.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Crystals\spikeMound.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Crystals\spikeRun.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Crystals\s_21.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Crystals\s_7_death.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Crystals\s_9_glow.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Crystals\s_9_glow1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\DarkForest\Platforms\tbg_3_end.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\rockBlock - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\rockBlock.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\rockBlockRight - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\rockBlockRight.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_1 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_1_noS - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_1_noS.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_2 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_3 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_4 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_5 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_6 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_7 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_8 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_8_left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_9.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_10.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_4 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\tbg_9.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\pixel.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\arial.xnb

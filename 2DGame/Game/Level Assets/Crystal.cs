@@ -19,7 +19,7 @@ namespace _2DGame
 
         public Crystal(Vector2 startPosition, Vector2 endPosition, float tripTime)        
         {
-            texture = Texture.Create("");
+            texture = Texture.Create("DarkForest/Crystals/s_9_glow1");
             position = startPosition;
             m_startPos = startPosition;
             m_endPos = endPosition;

@@ -34,7 +34,6 @@ namespace _2DGame
             contentManager = Content;
             contentManager.RootDirectory = "Content";
             inputHandler = new InputHandler();           
-            
         }
 
 
@@ -99,7 +98,7 @@ namespace _2DGame
             df_level = new DarkForest(camera);
             graphics.PreferredBackBufferWidth = windowWidth;
             graphics.PreferredBackBufferHeight = windowHeight;
-            f = contentManager.Load<SpriteFont>("Fonts/Helion");
+            f = contentManager.Load<SpriteFont>("arial");
             pixel = contentManager.Load<Texture2D>("pixel");
             editMode = true;
             graphics.ApplyChanges();

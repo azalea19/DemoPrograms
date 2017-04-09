@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/015_Left.png</SourceFile>
-  <SourceTime>2017-04-07T15:31:54.5575212+08:00</SourceTime>
-  <DestFile>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/bin/Windows/Player/Idle_Left/015_Left.xnb</DestFile>
-  <DestTime>2017-04-08T00:36:34.3730185+08:00</DestTime>
+  <SourceFile>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/015_Left.png</SourceFile>
+  <SourceTime>2017-04-10T00:12:37.1691707+08:00</SourceTime>
+  <DestFile>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/bin/Windows/Player/Idle_Left/015_Left.xnb</DestFile>
+  <DestTime>2017-04-10T01:34:23.1271228+08:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T23:05:36+08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

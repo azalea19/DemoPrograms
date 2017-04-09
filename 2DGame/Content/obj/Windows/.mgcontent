@@ -4,163 +4,216 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Particles/particle.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Particles/pink.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Particles/pinkglow.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Particles/whiteglow.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Particles/blueglow.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Particles/magicparticle.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Particles/smoke1.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Particles/smoke2.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Particles/smoke3.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/001_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/002_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/003_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/004_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/005_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/006_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/007_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/008_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/009_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/010_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/011_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/012_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/013_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/014_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/015_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/016_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/017_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/018_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Left/019_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/001_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/002_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/003_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/004_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/005_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/006_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/007_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/008_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/009_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/010_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/011_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/012_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/013_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/014_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/015_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/016_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/017_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/018_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Dead_Right/019_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/001_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/002_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/003_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/004_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/005_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/006_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/007_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/008_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/009_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/010_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/011_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/012_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/013_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/014_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/015_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/016_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/017_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/018_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Left/019_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/001_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/002_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/003_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/004_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/005_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/006_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/007_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/008_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/009_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/010_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/011_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/012_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/013_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/014_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/015_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/016_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/017_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/018_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Idle_Right/019_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/10_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/13_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/15_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/17_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/19_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/1_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/21_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/2_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/3_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/4_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/5_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/6_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/7_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Left/8_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/10_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/13_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/15_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/17_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/19_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/1_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/21_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/2_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/3_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/4_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/5_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/6_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/7_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Jump_Right/8_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/001_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/002_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/003_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/004_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/005_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/006_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/007_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/008_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/009_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/010_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Left/011_Left.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/001_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/002_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/003_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/004_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/005_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/006_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/007_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/008_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/009_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/010_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/Player/Run_Right/011_Right.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Crystals/s_7.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Crystals/s_8.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Crystals/s_9.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Crystals/s_14.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Platforms/s_10.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Platforms/s_11.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Platforms/s_12.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Platforms/s_13.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Platforms/tbg_3.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Platforms/tbg_4.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Trees/s_1.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Trees/s_2 - Copy.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Trees/s_2.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Trees/s_3 - Copy.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Trees/s_3.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Trees/s_4.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Trees/s_5.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Trees/s_6.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Background/s_16.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Background/s_17.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Background/tbg_1.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Background/tbg_2.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms/2DGame/Content/DarkForest/Background/tbg_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/particle.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/pink.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/pinkglow.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/whiteglow.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/blueglow.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/magicparticle.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/smoke1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/smoke2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/smoke3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/001_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/002_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/003_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/004_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/005_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/006_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/007_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/008_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/009_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/010_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/011_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/012_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/013_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/014_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/015_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/016_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/017_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/018_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Left/019_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/001_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/002_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/003_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/004_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/005_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/006_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/007_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/008_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/009_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/010_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/011_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/012_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/013_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/014_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/015_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/016_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/017_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/018_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Dead_Right/019_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/001_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/002_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/003_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/004_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/005_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/006_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/007_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/008_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/009_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/010_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/011_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/012_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/013_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/014_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/015_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/016_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/017_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/018_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Left/019_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/001_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/002_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/003_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/004_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/005_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/006_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/007_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/008_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/009_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/010_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/011_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/012_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/013_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/014_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/015_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/016_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/017_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/018_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Idle_Right/019_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/10_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/13_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/15_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/17_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/19_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/1_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/21_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/2_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/3_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/4_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/5_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/6_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/7_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Left/8_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/10_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/13_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/15_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/17_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/19_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/1_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/21_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/2_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/3_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/4_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/5_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/6_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/7_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Jump_Right/8_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/001_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/002_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/003_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/004_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/005_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/006_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/007_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/008_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/009_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/010_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Left/011_Left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/001_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/002_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/003_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/004_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/005_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/006_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/007_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/008_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/009_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/010_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Player/Run_Right/011_Right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Trees/s_1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Trees/s_2 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Trees/s_2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Trees/s_3 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Trees/s_3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Trees/s_4.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Trees/s_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Trees/s_6.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_2 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_3 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_4.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_6.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_15.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_16.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_17.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/tbg_1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/tbg_2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/tbg_2_end.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/tbg_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/s_7.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/s_7_death.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/s_8.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/s_9.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/s_9_glow.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/s_9_glow1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/s_14.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/s_21.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/spikeMound.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Crystals/spikeRun.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Platforms/s_10.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Platforms/s_11.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Platforms/s_12.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Platforms/s_13.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Platforms/tbg_3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Platforms/tbg_3_end.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Platforms/tbg_4.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/rockBlock - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/rockBlock.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/rockBlockRight - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/rockBlockRight.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_1 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_1_noS - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_1_noS.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_2 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_3 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_4 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_4.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_5 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_6 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_6.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_7 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_7.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_8 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_8.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_8_left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_9.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_4 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_4.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_6.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_7.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_8.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_9.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_10.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/pixel.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/arial.spritefont</File>
   </SourceFiles>
 </SourceFileCollection>

@@ -61,14 +61,14 @@ namespace _2DGame
             Texture middlePlatform = Texture.Create("DarkForest/Platforms/s_10");
             Texture spikeLedge = Texture.Create("DarkForest/Platforms/tbg_4");
 
-            Texture rockBlock = Texture.Create("MagicForest/Platforms/rockBlock");
-            Texture middleRock = Texture.Create("MagicForest/Platforms/tbg_10");
-            Texture rockBlockRight = Texture.Create("MagicForest/Platforms/rockBlockRight");
-            Texture magicPlatform = Texture.Create("MagicForest/Platforms/s_1_noS");
-            Texture leftWisp = Texture.Create("MagicForest/Platforms/s_9");
-            Texture rightWisp = Texture.Create("MagicForest/Platforms/s_7");
-            Texture middleLedge = Texture.Create("MagicForest/Platforms/tbg_4");
-            Texture crystalHang = Texture.Create("MagicForest/Background/tbg_1");
+            Texture rockBlock = Texture.Create("MagicForest/rockBlock");
+            Texture middleRock = Texture.Create("MagicForest/tbg_10");
+            Texture rockBlockRight = Texture.Create("MagicForest/rockBlockRight");
+            Texture magicPlatform = Texture.Create("MagicForest/s_1_noS");
+            Texture leftWisp = Texture.Create("MagicForest/s_9");
+            Texture rightWisp = Texture.Create("MagicForest/s_7");
+            Texture middleLedge = Texture.Create("MagicForest/tbg_4");
+            Texture crystalHang = Texture.Create("MagicForest/tbg_1");
 
 
             trees.Add(littleGrarlyTree);
