@@ -205,7 +205,6 @@
     <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_1.png</File>
     <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_2.png</File>
     <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_3.png</File>
-    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_4 - Copy.png</File>
     <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_4.png</File>
     <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_5.png</File>
     <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_6.png</File>
@@ -217,5 +216,99 @@
     <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/arial.spritefont</File>
     <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_13.png</File>
     <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/tbg_2_flip.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_4.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_6.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_7.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_8.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_9.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_10.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_11.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_12.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_13.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_14.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_15.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/s_16.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/tbg_1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/tbg_2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/tbg_3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/tbg_4.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/tbg_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/tbg_6.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/tbg_7.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/tbg_8.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Magma/tbg_9.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/DarkForest/Background/s_1_right.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_2_left.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_1 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_2 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_3 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_4 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_4.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_5 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_6 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_6.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_7 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_7.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_8 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_8.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_9 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_9.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_10 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_10.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_11 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_11.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_12 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_12.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_13 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_13.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_14 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_14.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_15.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_16.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_17.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_18.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_19 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_19.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_20 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_20.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_21.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_22.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_23.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_24.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_25.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_26.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_27.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_28.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/s_29.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_1.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_2.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_3.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_4.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_5.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_6.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_7.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_8.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_9.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_10.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_11.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_12.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_13.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_14.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Voodoo/tbg_15.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/purple.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/white.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/Particles/yellow.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_4 - Copy.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/s_24.png</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/icon 1024x1024.jpg</File>
+    <File>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/open.png</File>
   </SourceFiles>
 </SourceFileCollection>

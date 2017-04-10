@@ -255,3 +255,402 @@ D:\UserFiles\Desktop\DemoPrograms\2DGame\bin\Windows\x86\Release\Content\DarkFor
 D:\UserFiles\Desktop\DemoPrograms\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_4.xnb
 D:\UserFiles\Desktop\DemoPrograms\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_5.xnb
 D:\UserFiles\Desktop\DemoPrograms\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\obj\x86\Release\2DGame.exe
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\obj\x86\Release\2DGame.pdb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (1).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (10).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (2).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (3).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (4).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (5).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (6).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (7).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (8).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead (9).xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\flameball-32x32.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\001.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\002.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\003.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\004.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\005.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\006.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\007.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\008.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\009.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\010.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\011.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\012.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\013.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\014.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\015.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\016.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\017.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\018.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead\019.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\001.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\002.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\003.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\004.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\005.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\006.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\007.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\008.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\009.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\010.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\011.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\012.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\013.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\014.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\015.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\016.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\017.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\018.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle\019.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\10.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\13.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\15.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\17.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\19.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\21.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump\8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\001.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\002.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\003.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\004.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\005.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\006.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\007.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\008.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\009.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\010.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run\011.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Content.mgcb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\arial.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\pixel.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_15.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_16.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_17.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_2 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_3 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\tbg_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\tbg_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\tbg_2_end.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\tbg_2_flip.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\tbg_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\spikeMound.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\spikeRun.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\s_14.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\s_21.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\s_7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\s_7_death.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\s_8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\s_9.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\s_9_glow.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Crystals\s_9_glow1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Platforms\s_10.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Platforms\s_11.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Platforms\s_12.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Platforms\s_13.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Platforms\tbg_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Platforms\tbg_3_end.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Platforms\tbg_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_2 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_3 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Trees\s_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\rockBlock - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\rockBlock.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\rockBlockRight - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\rockBlockRight.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_1 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_1_noS - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_1_noS.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_2 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_3 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_4 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_5 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_6 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_7 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_8 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_8_left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_9.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_10.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_13.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_4 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\tbg_9.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_10.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_11.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_12.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_13.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_14.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_15.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_16.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\s_9.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\tbg_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\tbg_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\tbg_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\tbg_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\tbg_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\tbg_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\tbg_7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\tbg_8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Magma\tbg_9.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\blueglow.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\magicparticle.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\particle.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\pink.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\pinkglow.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\smoke1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\smoke2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\smoke3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\whiteglow.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\001_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\002_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\003_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\004_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\005_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\006_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\007_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\008_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\009_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\010_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\011_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\012_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\013_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\014_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\015_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\016_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\017_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\018_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Left\019_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\001_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\002_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\003_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\004_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\005_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\006_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\007_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\008_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\009_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\010_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\011_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\012_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\013_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\014_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\015_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\016_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\017_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\018_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Dead_Right\019_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\001_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\002_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\003_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\004_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\005_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\006_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\007_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\008_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\009_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\010_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\011_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\012_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\013_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\014_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\015_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\016_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\017_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\018_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Left\019_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\001_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\002_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\003_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\004_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\005_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\006_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\007_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\008_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\009_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\010_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\011_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\012_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\013_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\014_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\015_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\016_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\017_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\018_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Idle_Right\019_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\10_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\13_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\15_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\17_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\19_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\1_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\21_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\2_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\3_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\4_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\5_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\6_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\7_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Left\8_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\10_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\13_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\15_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\17_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\19_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\1_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\21_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\2_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\3_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\4_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\5_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\6_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\7_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Jump_Right\8_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\001_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\002_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\003_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\004_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\005_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\006_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\007_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\008_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\009_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\010_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Left\011_Left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\001_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\002_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\003_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\004_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\005_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\006_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\007_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\008_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\009_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\010_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Player\Run_Right\011_Right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\2DGame.exe
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\2DGame.pdb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\MonoGame.Framework.dll
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.MediaFoundation.dll
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.dll
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.XAudio2.dll
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.DXGI.dll
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.Direct3D11.dll
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.Direct2D1.dll
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.XInput.dll
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.Direct3D9.dll
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\MonoGame.Framework.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.MediaFoundation.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.XAudio2.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.DXGI.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.Direct3D11.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.Direct2D1.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.XInput.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\SharpDX.Direct3D9.xml
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\obj\x86\Release\2DGame.csprojResolveAssemblyReference.cache
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\DarkForest\Background\s_1_right.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_2_left.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_1 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_10 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_10.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_11 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_11.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_12 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_12.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_13 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_13.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_14 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_14.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_15.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_16.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_17.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_18.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_19 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_19.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_2 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_20 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_20.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_21.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_22.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_23.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_24.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_25.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_26.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_27.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_28.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_29.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_3 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_4 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_5 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_6 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_7 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_8 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_9 - Copy.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\s_9.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_1.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_10.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_11.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_12.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_13.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_14.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_15.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_2.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_3.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_4.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_5.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_6.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_7.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_8.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_9.xnb

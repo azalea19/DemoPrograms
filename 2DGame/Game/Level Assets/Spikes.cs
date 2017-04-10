@@ -10,20 +10,30 @@ namespace _2DGame
 {
     class Spikes
     {
-        public Texture m_texture;
-        public Vector2 m_position;
+        public Texture texture;
+        public Vector2 position;
 
         public Spikes(Texture texture, Vector2 position)
         {
-            m_texture = texture;
-            m_position = position;
+            this.texture = texture;
+            this.position = position;
+        }
+
+        public Texture GetTexture()
+        {
+            return texture;
+        }
+
+        public Vector2 GetPosition()
+        {
+            return position;
         }
 
         public void Draw(SpriteBatch spriteBatch, Camera camera)
         {
-            Rectangle sourceRect = new Rectangle(0, 0, m_texture.Width, m_texture.Height);
-            Vector2 origin = new Vector2(m_texture.Width / 2, m_texture.Height / 2);
-            spriteBatch.Draw(m_texture, m_position - camera.m_position, sourceRect, Color.White);
+            Rectangle sourceRect = new Rectangle(0, 0, texture.Width, texture.Height);
+            Vector2 origin = new Vector2(texture.Width / 2, texture.Height / 2);
+            spriteBatch.Draw(texture, position - camera.m_position, sourceRect, Color.White);
         }
     }
 }

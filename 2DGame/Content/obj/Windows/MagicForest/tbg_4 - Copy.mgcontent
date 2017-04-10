@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/MagicForest/tbg_4 - Copy.png</SourceFile>
-  <SourceTime>2016-03-06T22:19:00+08:00</SourceTime>
+  <SourceTime>2017-04-10T22:12:49.7731625+08:00</SourceTime>
   <DestFile>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/bin/Windows/MagicForest/tbg_4 - Copy.xnb</DestFile>
-  <DestTime>2017-04-10T02:11:21.6692776+08:00</DestTime>
+  <DestTime>2017-04-10T23:04:57.6284628+08:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T23:05:36+08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

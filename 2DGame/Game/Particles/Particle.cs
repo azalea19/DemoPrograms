@@ -18,6 +18,7 @@ namespace _2DGame
         public Color m_color { get; set; }
         public float m_size { get; set; }
         public int m_ttl { get; set; }
+        private int m_maxttl;
         public int m_numStages;
 
         public Particle(Texture texture, Vector2 position, Vector2 velocity, float angle, float angularVelocity, Color color, float size, int ttl, int numStages)
@@ -30,6 +31,7 @@ namespace _2DGame
             m_color = color;
             m_size = size;
             m_ttl = ttl;
+            m_maxttl = ttl;
             m_numStages = numStages;
         }
 
@@ -44,7 +46,8 @@ namespace _2DGame
         {
             Rectangle sourceRect = new Rectangle(0, 0, m_texture.Width, m_texture.Height);
             Vector2 origin = new Vector2(m_texture.Width / 2, m_texture.Height / 2);
-            spriteBatch.Draw(m_texture, m_position - camera.m_position, sourceRect, m_color, m_angle, origin, m_size, SpriteEffects.None, 0f);
+            float alphaScale = (float)Math.Sqrt(m_ttl / (float)m_maxttl);
+            spriteBatch.Draw(m_texture, m_position - camera.m_position, sourceRect, m_color * alphaScale, m_angle, origin, m_size, SpriteEffects.None, 0f);
         }
     }
 }

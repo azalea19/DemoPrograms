@@ -38,6 +38,7 @@ namespace _2DGame
         List<Texture> particles = new List<Texture>();
         private ParticleEngine jumpEmitter;
 
+        Vector2 checkPoint;
 
         public AnimationHandler[] m_animations;
 
@@ -49,6 +50,8 @@ namespace _2DGame
         public Vector2 m_position;
         public Vector2 m_velocity;
 
+        public bool isDead;
+
         public Player(Vector2 startPos)
         {
             m_animations = new AnimationHandler[PlayerState.NUM_STATES];           
@@ -58,12 +61,16 @@ namespace _2DGame
             m_position = startPos;
             m_velocity = new Vector2(0, 0);
             m_currentState = PlayerState.IDLE_RIGHT;
-            m_animationStart = 0;        
-            
+            m_animationStart = 0;
+            checkPoint = new Vector2(100, 0);
+
+
             particles.Add(Texture.Create("Particles/magicparticle"));
             particles.Add(Texture.Create("Particles/blueglow"));
             particles.Add(Texture.Create("Particles/whiteglow"));
-            jumpEmitter = new ParticleEngine(particles, m_position, 1, 0.4f);
+            jumpEmitter = new ParticleEngine(particles, m_position, 1, 0.4f, 30);
+
+            isDead = false;
         } 
 
 
@@ -293,8 +300,10 @@ namespace _2DGame
             {                
                 case PlayerState.DEAD_LEFT:
                     if(dt > m_animations[PlayerState.DEAD_LEFT].TotalAnimationTime() )
-                    {              
-                        //TODO         
+                    {
+                        isDead = false;
+                        SetState(PlayerState.IDLE_LEFT, currentTime);
+                        m_position = checkPoint;
                     }
                     else
                     {
@@ -304,8 +313,10 @@ namespace _2DGame
 
                 case PlayerState.DEAD_RIGHT:
                     if(dt > m_animations[PlayerState.DEAD_RIGHT].TotalAnimationTime())
-                    {                       
-                        //TODO
+                    {
+                        isDead = false;
+                        SetState(PlayerState.IDLE_RIGHT, currentTime);
+                        m_position = checkPoint;
                     }
                     else
                     {
@@ -315,7 +326,8 @@ namespace _2DGame
 
                 case PlayerState.JUMP_LEFT:
                     if (dt > m_animations[PlayerState.JUMP_LEFT].TotalAnimationTime())
-                    {                                              
+                    {
+                        isDead = false;                          
                         SetState(PlayerState.IDLE_LEFT, currentTime);
                         jumpEmitter.SetEnabled(false);
                     }
@@ -358,6 +370,11 @@ namespace _2DGame
         {
             float currentTime = (float)gameTime.TotalGameTime.TotalSeconds;
 
+            if (m_position.X > 10000)
+            {
+                checkPoint = new Vector2(10000, -500);
+            }
+
             //Check1:
             //If still jumping or still dying
             //Keep playing that animation don't check input
@@ -371,7 +388,7 @@ namespace _2DGame
 
 
             //Only do the following if not jumping or dying            
-            if(!AnimationPlaying(currentTime))
+            if (!AnimationPlaying(currentTime))
             {
                 if (Game1.inputHandler.KeyDown(Keys.A))
                 {
@@ -400,15 +417,35 @@ namespace _2DGame
                 m_velocity += new Vector2(3.5f, 0);
             }
 
+            
             //So you can jump while running
-            if (m_currentState != PlayerState.JUMP_RIGHT && m_currentState != PlayerState.JUMP_LEFT && Game1.inputHandler.KeyPressed(Keys.Space))
+            if (m_currentState != PlayerState.JUMP_RIGHT && m_currentState != PlayerState.JUMP_LEFT && Game1.inputHandler.KeyPressed(Keys.Space) && !isDead)
             {
                 jumpEmitter.SetEnabled(true);
+                jumpEmitter.Restart((float)gameTime.TotalGameTime.TotalSeconds);
                 m_velocity += new Vector2(0, -35.0f);
-                SetState(m_stateLookup[m_currentState, InputAction.JUMP], currentTime);
+                SetState(m_stateLookup[m_currentState, InputAction.JUMP], currentTime);                
             }
+
+            if(isDead == true)
+            {
+                if (m_currentState < 4)
+                {
+                    SetState(PlayerState.DEAD_RIGHT, currentTime);
+                }
+                else
+                {
+                    SetState(PlayerState.DEAD_LEFT, currentTime);
+                }
+            }
+
             jumpEmitter.SetEmitterLocation(new Vector2(m_position.X + (m_animations[m_currentState].GetAnimation().GetFrameWidth() /2), m_position.Y + m_animations[m_currentState].GetAnimation().GetFrameHeight()));
-            jumpEmitter.Update();
+            jumpEmitter.Update((float)gameTime.TotalGameTime.TotalSeconds);
+        }
+
+        public int GetState()
+        {
+            return m_currentState;
         }
 
 

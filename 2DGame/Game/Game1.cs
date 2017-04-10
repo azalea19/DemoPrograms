@@ -14,6 +14,7 @@ namespace _2DGame
 
         public static bool fullScreen;
         public static bool editMode;
+        public static bool gameRunning;
 
         public static GraphicsDevice graphicsDevice;
         public static ContentManager contentManager;
@@ -23,6 +24,8 @@ namespace _2DGame
         SpriteEffects spriteEffects;
         public static int windowWidth;
         public static int windowHeight;
+
+        Texture openingScreen;
 
         DarkForest df_level;
         SpriteFont f;
@@ -90,6 +93,8 @@ namespace _2DGame
         protected override void Initialize()
         {
             base.Initialize();
+            openingScreen = Texture.Create("open");
+            gameRunning = false;
             windowWidth = 1200;
             windowHeight = 900;
             graphicsDevice = GraphicsDevice;
@@ -124,22 +129,21 @@ namespace _2DGame
 
             inputHandler.Update();        
                          
-            if(inputHandler.KeyPressed(Keys.F11))
+            if(inputHandler.KeyPressed(Keys.Space))
             {
-                ToggleFullScreen();
-            }
-            if(inputHandler.KeyPressed(Keys.F1))
-            {
-                ToggleEditMode();
+                gameRunning = true;
             }
 
-            if(editMode)
-            {
-                ControlViewPort();                
+            if(gameRunning)
+            { 
+                df_level.Update(gameTime);
             }
 
-            df_level.Update(gameTime);
-
+            if(df_level.levelComplete)
+            {
+                gameRunning = false;
+            }
+            
             base.Update(gameTime);
         }
 
@@ -198,22 +202,31 @@ namespace _2DGame
         }
 
 
+        public void DrawOpenScreen()
+        {
+            Rectangle sourceRect = new Rectangle(0, 0, openingScreen.Width,openingScreen.Height);
+            spriteBatch.Draw(openingScreen, new Vector2(0), sourceRect, Color.White);
+        }
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
 
-            if(!editMode)
+            spriteBatch.Begin();     
+
+            if(gameRunning)
             {
+                IsMouseVisible = false;
                 UpdateViewport(df_level.player);
+                df_level.Draw(gameTime, spriteBatch, spriteEffects, camera);                
             }
-            
-            spriteBatch.Begin();
-
-            df_level.Draw(gameTime, spriteBatch, spriteEffects, camera);
-
-
-            ShowCursorPos();
-            DrawCrossHair();
+            else
+            {
+                IsMouseVisible = true;
+                DrawOpenScreen();
+                DrawCrossHair();
+                spriteBatch.DrawString(f, "Press Space to Begin", new Vector2(650, 200), Color.DarkBlue);       
+            }
 
             spriteBatch.End();
           

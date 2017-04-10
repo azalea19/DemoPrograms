@@ -28,6 +28,27 @@ namespace _2DGame
             
         }
 
+        public Crystal(Vector2 startPosition)
+        {
+            texture = Texture.Create("DarkForest/Crystals/s_9_glow1");
+            position = startPosition;
+            m_startPos = startPosition;
+            m_endPos = new Vector2(startPosition.X,startPosition.Y+15);
+            m_tripTime = 2;
+            m_timer = 0;
+
+        }
+
+        public Texture GetTexture()
+        {
+            return texture;
+        }
+
+        public Vector2 GetPosition()
+        {
+            return position;
+        }
+
         public void Update(GameTime gameTime)
         {
             float t = (float)gameTime.ElapsedGameTime.TotalSeconds;

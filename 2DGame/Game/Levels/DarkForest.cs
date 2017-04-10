@@ -10,16 +10,25 @@ namespace _2DGame
 {
     class DarkForest : Level
     {
+        public bool levelComplete;
+
+        Platform endPost;
+        Vector2 checkPoint;
         List<Texture> particles;
         List<Crystal> crystals;
         List<Spikes> spikes;
         public Player player;
         public Camera camera;
 
+        public int crystalsCollected;
+        public int totalCrystals;
+
         List<BackgroundImage> background;
         List<BackgroundImage> middleground;
         List<BackgroundImage> foreground;
         List<Texture> trees;
+
+        SurfaceParticleEngine sp;
 
         public DarkForest(Camera cam)
         {
@@ -29,6 +38,9 @@ namespace _2DGame
 
         public override void Initialise()
         {
+            levelComplete = false;
+            crystalsCollected = 0;
+
             Random r = new Random();
 
             background = new List<BackgroundImage>();
@@ -68,17 +80,27 @@ namespace _2DGame
             Texture magicPlatform = Texture.Create("MagicForest/s_1_noS");
             Texture leftWisp = Texture.Create("MagicForest/s_9");
             Texture rightWisp = Texture.Create("MagicForest/s_7");
-            Texture middleLedge = Texture.Create("MagicForest/tbg_4");
+            Texture middleLedge = Texture.Create("MagicForest/tbg_4 - Copy");
             Texture crystalHang = Texture.Create("MagicForest/tbg_1");
             Texture magicForest = Texture.Create("MagicForest/tbg_2");
             Texture rockwall = Texture.Create("MagicForest/tbg_9");
             Texture greenHangMiddle = Texture.Create("MagicForest/tbg_13");
+
+            Texture glowingFlower = Texture.Create("MagicForest/s_2");
+            Texture glowingFlowerRight = Texture.Create("MagicForest/s_2_left");
+            Texture levelEnd = Texture.Create("Voodoo/s_4");
+            Texture goldPlatform = Texture.Create("Voodoo/s_24");
+
 
             trees.Add(littleGrarlyTree);
             trees.Add(bigGnarlyTree);
             trees.Add(treeBlock);
             trees.Add(twistedTree);
             trees.Add(branchedTree);
+
+            particles.Add(Texture.Create("Particles/white"));
+
+            particles.Add(Texture.Create("Particles/yellow"));
 
             //Tiled images in background
             Platform ledgeTile;
@@ -91,6 +113,7 @@ namespace _2DGame
             int length = 20;
 
             player = new Player(new Vector2(100, 0));
+            checkPoint = new Vector2(100, 0);
 
             //Add all the background images
             for (int k= 0; k < length; k++)
@@ -148,8 +171,6 @@ namespace _2DGame
             m_platforms.Add(new MovingPlatform(longPlatform, new Vector2(512, -256), new Vector2(1024, -256), 5));
             camera.SetPosition(new Vector2(-50, -600));
 
-            spikes.Add(new Spikes(bigSpikes, new Vector2(1901,-120)));
-            spikes.Add(new Spikes(bigSpikes, new Vector2(2930, -120)));
             spikes.Add(new Spikes(spikeMound, new Vector2(4224, -245)));
             spikes.Add(new Spikes(spikeRun, new Vector2(6000, -120)));
 
@@ -166,33 +187,14 @@ namespace _2DGame
             spikes.Add(new Spikes(bigSpikes, new Vector2(7359, 52)));
             spikes.Add(new Spikes(bigSpikes, new Vector2(8382, 52)));
 
-            foreground.Add(new BackgroundImage(rockBlock, new Vector2(9900,-512-180)));
-            foreground.Add(new BackgroundImage(middleRock, new Vector2(10749,-512-180)));
-            foreground.Add(new BackgroundImage(middleRock, new Vector2(11261, -512 - 180)));
-            foreground.Add(new BackgroundImage(rockBlockRight, new Vector2(11773,-512-180)));
-            foreground.Add(new BackgroundImage(crystalHang, new Vector2(12594, -705)));
 
-            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(10488, 205), new Vector2(10714, 205), 5));
-            m_platforms.Add(new Platform(magicPlatform, new Vector2(10405, -122)));
-
-            crystals.Add(new Crystal(new Vector2(10496, 65), new Vector2(10496, 122), 2));
-            crystals.Add(new Crystal(new Vector2(10657, 65), new Vector2(10657, 122), 2));
-
-            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(11240, 116), new Vector2(10999, 116), 5));
-
-            crystals.Add(new Crystal(new Vector2(11166, 22), new Vector2(11166, 31), 2));
-            crystals.Add(new Crystal(new Vector2(11311, 22), new Vector2(11311, 31), 2));
-
-            m_platforms.Add(new Platform(leftWisp, new Vector2(11843, 0)));
-            m_platforms.Add(new Platform(middleLedge, new Vector2(12355,0)));
-
-            for(int i =0; i < length; i++)
+            for (int i = 0; i < length; i++)
             {
                 foreground.Add(new BackgroundImage(middleHangFlowerFlip, new Vector2(512 * i + 200, -803)));
             }
-            for(int i=0; i < length; i++)
+            for (int i = 0; i < length; i++)
             {
-                foreground.Add(new BackgroundImage(middleHangFlowerFlip, new Vector2(512 * i, -803)));               
+                foreground.Add(new BackgroundImage(middleHangFlowerFlip, new Vector2(512 * i, -803)));
             }
             for (int i = 0; i < length; i++)
             {
@@ -207,7 +209,92 @@ namespace _2DGame
                 foreground.Add(new BackgroundImage(middleHangFlowerFlip, new Vector2(512 * i, -1000)));
             }
 
-            foreground.Add(new BackgroundImage(crystalHang, new Vector2(12355,-512-180)));
+            foreground.Add(new BackgroundImage(rockBlock, new Vector2(9900,-512-180)));
+            foreground.Add(new BackgroundImage(middleRock, new Vector2(10749,-512-180)));
+            foreground.Add(new BackgroundImage(middleRock, new Vector2(11261, -512 - 180)));
+            background.Add(new BackgroundImage(rockBlockRight, new Vector2(11773,-512-180)));
+
+            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(10488, 205), new Vector2(10714, 205), 5));
+            m_platforms.Add(new Platform(magicPlatform, new Vector2(10405, -122)));
+
+            crystals.Add(new Crystal(new Vector2(10496, 65)));
+            crystals.Add(new Crystal(new Vector2(10657, 65)));
+
+            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(11240, 116), new Vector2(10999, 116), 5));
+
+            crystals.Add(new Crystal(new Vector2(11166, 22)));
+            crystals.Add(new Crystal(new Vector2(11311, 22)));
+       
+
+            for (int i = 0; i < length+3; i++)
+            {
+                background.Add(new BackgroundImage(rockwall, new Vector2(9900 + 512 * i, -512 - 180 - 512)));
+                foreground.Add(new BackgroundImage(crystalHang, new Vector2(9900 + 512 * i, -710)));
+            }
+
+            for (int i = 0; i < length+3; i++)
+            {
+                background.Add(new BackgroundImage(rockwall, new Vector2(9900 + 512 * i, -512 - 180 - 512 - 512)));                
+            }
+
+            for (int i = 0; i < length+3; i++)
+            {
+                background.Add(new BackgroundImage(rockwall, new Vector2(9900 + 512 * i, -512 - 180 - 512 - 512 -512)));
+            }
+           
+
+            m_platforms.Add(new Platform(magicPlatform, new Vector2(10829,-79)));
+            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(11580, -6), new Vector2(11756, -147), 5));
+            m_platforms.Add(new Platform(magicPlatform, new Vector2(12056,-186)));
+            m_platforms.Add(new Platform(magicPlatform, new Vector2(12496, -290)));
+
+            crystals.Add(new Crystal(new Vector2(12146, -276)));
+            crystals.Add(new Crystal(new Vector2(12565, -371)));
+
+            m_platforms.Add(new Platform(magicPlatform,new Vector2(12920, -400)));
+
+            crystals.Add(new Crystal(new Vector2(12290,-525)));
+            m_platforms.Add(new Platform(magicPlatform, new Vector2(13319, -522)));
+
+            crystals.Add(new Crystal(new Vector2(13009, -485)));
+            crystals.Add(new Crystal(new Vector2(13401, -599)));
+            m_platforms.Add(new Platform(magicPlatform, new Vector2(13758, -599)));
+
+
+            m_platforms.Add(new Platform(leftWisp, new Vector2(15020-512, -180)));
+            
+            for (int i = 10; i < length; i++)
+            {              
+                m_platforms.Add(new Platform(middleLedge, new Vector2(9900 + 512 * i, -180)));
+            }
+
+            m_platforms.Add(new Platform(magicPlatform, new Vector2(14153, -840)));
+            crystals.Add(new Crystal(new Vector2(14248, -935)));
+
+            for(int i = 0; i < length*3; i++)
+            {
+                int choice = r.Next(-1, 2);
+                if(choice == 1)
+                {
+                    foreground.Add(new BackgroundImage(glowingFlower, new Vector2(15000 + r.Next(0, 100) * i, -180 - 170)));
+                }
+                if(choice == 0)
+                {
+                    foreground.Add(new BackgroundImage(glowingFlowerRight, new Vector2(15000 + r.Next(0, 4500) + r.Next(0,200), -180 - 170)));
+                }
+                
+            }
+
+            m_platforms.Add(new Platform(rightWisp, new Vector2(20140, -180)));
+            endPost = new Platform(levelEnd, new Vector2(20132,-292));
+            sp = new SurfaceParticleEngine(particles, new Vector2(15000,-166), 5000, 1, 0.1f, 15);
+            sp.SetEnabled(true);
+
+            m_platforms.Add(new Platform(magicPlatform, new Vector2(14742, -599)));
+            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(14188, -519),new Vector2(14577,-346),5));
+            m_platforms.Add(endPost);
+
+            totalCrystals = crystals.Count;
         }
 
         public Vector2 ImageToWorldSpace(Vector2 imagePosition, Vector2 worldPosition)
@@ -302,7 +389,37 @@ namespace _2DGame
                         }
 
                         return true;
-                    }
+                    }                   
+                }
+            }
+
+            for (int i = 0; i < spikes.Count; i++)
+            {
+                temp = new BoundingBox(spikes[i].GetTexture(), spikes[i].GetPosition());
+
+                if (PixelCollision(player.GetCurrentTexture(gameTime), player.m_position, spikes[i].GetTexture(), spikes[i].GetPosition()))
+                {
+                    player.isDead = true;                                     
+                }
+            }
+
+            for (int i = 0; i < crystals.Count; i++)
+            {
+                temp = new BoundingBox(crystals[i].GetTexture(), crystals[i].GetPosition());
+
+                if (PixelCollision(player.GetCurrentTexture(gameTime), player.m_position, crystals[i].GetTexture(), crystals[i].GetPosition()))
+                {
+                    crystals.Remove(crystals[i]);
+                    crystalsCollected++;
+                }
+            }
+
+
+            if (player.m_position.X > endPost.m_position.X)
+            {
+                if(crystals.Count == 0)
+                {
+                    levelComplete = true;
                 }
             }
 
@@ -310,7 +427,14 @@ namespace _2DGame
         }
 
         public override void Update(GameTime gameTime)
-        {                      
+        {
+            sp.Update((float)gameTime.TotalGameTime.TotalSeconds);
+
+            if(player.m_position.Y > 10200)
+            {
+                player.isDead = true;
+            }
+              
             for (int j = 0; j < m_platforms.Count; j++)
             {
                 m_platforms[j].Update(gameTime);
@@ -321,7 +445,6 @@ namespace _2DGame
             }
 
             player.Update(gameTime);          
-
             player.m_position += player.m_velocity;
 
             if(PlayerCollision(gameTime))
@@ -329,7 +452,6 @@ namespace _2DGame
                 player.m_velocity.Y = 0;
                 player.m_position = IslandSearch(gameTime);
             }
-
             player.m_velocity.Y += 2f;
             player.m_velocity.X *= 0.5f;            
         }
@@ -529,7 +651,7 @@ namespace _2DGame
             {
                 middleground[i].Draw(spriteBatch, camera);
             }
-            
+           
 
             for (int j = 0; j < m_platforms.Count; j++)
             {
@@ -550,8 +672,7 @@ namespace _2DGame
                 foreground[i].Draw(spriteBatch, camera);
             }
 
-
-
+            sp.Draw(spriteBatch, camera);        
             player.Draw(gameTime, spriteBatch, spriteEffects, camera);          
         }
 

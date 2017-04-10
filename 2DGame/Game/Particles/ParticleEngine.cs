@@ -17,8 +17,12 @@ namespace _2DGame
         private List<Particle> m_particles;
         private List<Texture> m_textures;
         private int m_particleStages;
+        float m_startTime;
+        float m_particlesPerSecond;
+        int m_particlesCreated;
+        int m_width;
 
-        public ParticleEngine(List<Texture> textures, Vector2 location, int particleStages, float scale)
+        public ParticleEngine(List<Texture> textures, Vector2 location, int particleStages, float scale, float particlesPerSecond)
         {
             m_emitterLocation = location;
             m_particles = new List<Particle>();
@@ -26,6 +30,9 @@ namespace _2DGame
             m_random = new Random();
             m_particleStages = particleStages;
             m_scale = scale;
+            m_startTime = 0;
+            m_particlesPerSecond = particlesPerSecond;
+            m_particlesCreated = 0;
         }
 
         private Particle GenerateNewParticle()
@@ -36,10 +43,16 @@ namespace _2DGame
             float angle = 0;
             float angularVelocity = 0.1f * (float)(m_random.NextDouble() * 2 - 1);
             Color color = Color.White;//new Color((float)m_random.NextDouble(), (float)m_random.NextDouble(), (float)m_random.NextDouble());
-            float size = (float)m_random.NextDouble() * m_scale;
+            float size = (float)(m_random.NextDouble() * 0.8 + 0.2) * m_scale;
             int ttl = 1 + m_random.Next(100,500);
 
             return new Particle(texture, position, velocity, angle, angularVelocity, color, size, ttl, m_particleStages);
+        }
+
+        public void Restart(float gameTime)
+        {
+            m_startTime = gameTime;
+            m_particlesCreated = 0;
         }
 
         public void SetEmitterLocation(Vector2 location)
@@ -52,13 +65,15 @@ namespace _2DGame
             enabled = value;
         }
 
-        public void Update()
+        public void Update(float gameTime)
         {
+            float dt = gameTime - m_startTime;
+            int newParticles = (int)(dt * m_particlesPerSecond) - m_particlesCreated;
+            m_particlesCreated += newParticles;
+            
             if(enabled)
             {
-                int total = 1;
-
-                for (int i = 0; i < total; i++)
+                for (int i = 0; i < newParticles; i++)
                 {
                     m_particles.Add(GenerateNewParticle());
                 }                
