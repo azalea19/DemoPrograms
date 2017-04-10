@@ -797,5 +797,4 @@ D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\Pa
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\Particles\white.xnb
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\Particles\yellow.xnb
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\MagicForest\s_24.xnb
-D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\icon 1024x1024.xnb
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Debug\Content\open.xnb

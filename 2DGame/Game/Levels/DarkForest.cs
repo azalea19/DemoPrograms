@@ -220,7 +220,7 @@ namespace _2DGame
             crystals.Add(new Crystal(new Vector2(10496, 65)));
             crystals.Add(new Crystal(new Vector2(10657, 65)));
 
-            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(11240, 116), new Vector2(10999, 116), 5));
+            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(11240, 116), new Vector2(10999, 116), 4));
 
             crystals.Add(new Crystal(new Vector2(11166, 22)));
             crystals.Add(new Crystal(new Vector2(11311, 22)));
@@ -244,7 +244,7 @@ namespace _2DGame
            
 
             m_platforms.Add(new Platform(magicPlatform, new Vector2(10829,-79)));
-            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(11580, -6), new Vector2(11756, -147), 5));
+            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(11580, -6), new Vector2(11756, -147), 4));
             m_platforms.Add(new Platform(magicPlatform, new Vector2(12056,-186)));
             m_platforms.Add(new Platform(magicPlatform, new Vector2(12496, -290)));
 
@@ -291,7 +291,7 @@ namespace _2DGame
             sp.SetEnabled(true);
 
             m_platforms.Add(new Platform(magicPlatform, new Vector2(14742, -599)));
-            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(14188, -519),new Vector2(14577,-346),5));
+            m_platforms.Add(new MovingPlatform(magicPlatform, new Vector2(14188, -519),new Vector2(14577,-346),4));
             m_platforms.Add(endPost);
 
             totalCrystals = crystals.Count;

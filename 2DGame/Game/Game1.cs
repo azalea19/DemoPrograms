@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
 
@@ -11,6 +12,7 @@ namespace _2DGame
     public class Game1 : Game
     {
         public Camera camera;
+        public Song music;
 
         public static bool fullScreen;
         public static bool editMode;
@@ -93,6 +95,10 @@ namespace _2DGame
         protected override void Initialize()
         {
             base.Initialize();
+            music = contentManager.Load<Song>("shock_wave");
+            MediaPlayer.Play(music);
+            MediaPlayer.IsRepeating = true;
+
             openingScreen = Texture.Create("open");
             gameRunning = false;
             windowWidth = 1200;
@@ -126,7 +132,6 @@ namespace _2DGame
 
         protected override void Update(GameTime gameTime)
         {         
-
             inputHandler.Update();        
                          
             if(inputHandler.KeyPressed(Keys.Space))
@@ -142,6 +147,7 @@ namespace _2DGame
             if(df_level.levelComplete)
             {
                 gameRunning = false;
+
             }
             
             base.Update(gameTime);
@@ -223,9 +229,7 @@ namespace _2DGame
             else
             {
                 IsMouseVisible = true;
-                DrawOpenScreen();
-                DrawCrossHair();
-                spriteBatch.DrawString(f, "Press Space to Begin", new Vector2(650, 200), Color.DarkBlue);       
+                DrawOpenScreen();           
             }
 
             spriteBatch.End();

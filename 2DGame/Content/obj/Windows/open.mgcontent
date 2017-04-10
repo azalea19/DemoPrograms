@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/open.png</SourceFile>
-  <SourceTime>2017-04-10T23:04:25.5122428+08:00</SourceTime>
+  <SourceTime>2017-04-11T01:31:58.4622086+08:00</SourceTime>
   <DestFile>D:/UserFiles/Desktop/DemoPrograms - Copy/2DGame/Content/bin/Windows/open.xnb</DestFile>
-  <DestTime>2017-04-10T23:04:58.0157774+08:00</DestTime>
+  <DestTime>2017-04-11T02:22:29.8725155+08:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T23:05:36+08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

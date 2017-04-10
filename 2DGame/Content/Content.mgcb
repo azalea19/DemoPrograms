@@ -3656,18 +3656,6 @@
 /processorParam:TextureFormat=Color
 /build:MagicForest/s_24.png
 
-#begin icon 1024x1024.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:icon 1024x1024.jpg
-
 #begin open.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -3679,4 +3667,10 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:open.png
+
+#begin shock_wave.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:shock_wave.mp3
 

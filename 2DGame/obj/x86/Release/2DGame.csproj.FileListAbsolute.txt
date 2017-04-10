@@ -654,3 +654,10 @@ D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_7.xnb
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_8.xnb
 D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Voodoo\tbg_9.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\open.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\MagicForest\s_24.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\purple.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\white.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\Particles\yellow.xnb
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\shock_wave.wma
+D:\UserFiles\Desktop\DemoPrograms - Copy\2DGame\bin\Windows\x86\Release\Content\shock_wave.xnb
