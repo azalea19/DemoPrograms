@@ -10,61 +10,112 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
+
     public class Texture
     {
-        Texture2D m_texture;
+        /// <summary>
+        /// The texture
+        /// </summary>
+        Texture2D texture;
+
+        /// <summary>
+        /// The pixels
+        /// </summary>
         Microsoft.Xna.Framework.Color[] pixels;
 
+        /// <summary>
+        /// Prevents a default instance of the <see cref="Texture"/> class from being created.
+        /// </summary>
         private Texture()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Texture"/> class.
+        /// </summary>
+        /// <param name="texture">The texture.</param>
         public Texture(Texture2D texture)
         {
-            m_texture = texture;
-            pixels = new Microsoft.Xna.Framework.Color[m_texture.Width * m_texture.Height];
-            m_texture.GetData<Microsoft.Xna.Framework.Color>(pixels);
-
-
-
+            this.texture = texture;
+            pixels = new Microsoft.Xna.Framework.Color[this.texture.Width * this.texture.Height];
+            this.texture.GetData<Microsoft.Xna.Framework.Color>(pixels);
         }
 
+        /// <summary>
+        /// Creates a Texture from the specified texture path.
+        /// </summary>
+        /// <param name="texturePath">The texture path.</param>
+        /// <returns></returns>
         public static Texture Create(string texturePath)
         {
             return new Texture(Game1.contentManager.Load<Texture2D>(texturePath));
         }
 
+        /// <summary>
+        /// Performs an implicit conversion from <see cref="Texture"/> to <see cref="Texture2D"/>.
+        /// </summary>
+        /// <param name="texture">The texture.</param>
+        /// <returns>
+        /// The result of the conversion.
+        /// </returns>
         public static implicit operator Texture2D(Texture texture)
         {
-            return texture.m_texture;
+            return texture.texture;
         }
 
+        /// <summary>
+        /// Gets the width.
+        /// </summary>
+        /// <value>
+        /// The width.
+        /// </value>
         public int Width
         {
             get
             {
-                return m_texture.Width;
+                return texture.Width;
             }
         }
 
+        /// <summary>
+        /// Gets the height.
+        /// </summary>
+        /// <value>
+        /// The height.
+        /// </value>
         public int Height
         {
             get
             {
-                return m_texture.Height;
+                return texture.Height;
             }
         }
 
+        /// <summary>
+        /// Gets the pixel at [x,y].
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <returns></returns>
         public Microsoft.Xna.Framework.Color GetPixel(int x, int y)
         {
-            return pixels[y * m_texture.Width + x];
+            return pixels[y * texture.Width + x];
         }
 
+        /// <summary>
+        /// Gets the pixel at [x,y].
+        /// </summary>
+        /// <param name="position">The position.</param>
+        /// <returns></returns>
         public Microsoft.Xna.Framework.Color GetPixel(Vector2 position)
         {
             return GetPixel((int)position.X, (int)position.Y);
         }
 
+        /// <summary>
+        /// Saves the texture to a bitmap.
+        /// </summary>
+        /// <returns></returns>
         public Bitmap ToBitmap()
         {
             Bitmap img = new Bitmap(Width, Height);

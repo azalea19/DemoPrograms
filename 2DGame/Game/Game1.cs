@@ -59,17 +59,19 @@ namespace _2DGame
 
         public void DrawCrossHair()
         {
-            Rectangle vertical = new Rectangle(inputHandler.currentMouse.Position.X, 0, 1, windowHeight);
-            Rectangle horizontal = new Rectangle(0,inputHandler.currentMouse.Position.Y, windowWidth, 1);
+            Rectangle vertical = new Rectangle(inputHandler.GetCurrentMouse().Position.X, 0, 1, windowHeight);
+            Rectangle horizontal = new Rectangle(0,inputHandler.GetCurrentMouse().Position.Y, windowWidth, 1);
             
             spriteBatch.Draw(pixel, vertical, Color.Red);
             spriteBatch.Draw(pixel, horizontal, Color.Red);
         }
 
+
         public void ShowCursorPos()
         {           
-            spriteBatch.DrawString(f, (inputHandler.currentMouse.Position.X + camera.m_position.X) + "," + (inputHandler.currentMouse.Position.Y + camera.m_position.Y), new Vector2(100,100), Color.White);
+            spriteBatch.DrawString(f, (inputHandler.GetCurrentMouse().Position.X + camera.GetPosition().X) + "," + (inputHandler.GetCurrentMouse().Position.Y + camera.GetPosition().Y), new Vector2(100,100), Color.White);
         }
+
 
         public void ToggleFullScreen()
         {
@@ -158,19 +160,27 @@ namespace _2DGame
         {
             if(inputHandler.KeyDown(Keys.W))
             {
-                camera.m_position.Y -= 50;
+                float yPos = camera.GetPosition().Y;
+                yPos -= 50;
+                camera.SetY(yPos);
             }
             if(inputHandler.KeyDown(Keys.S))
             {
-                camera.m_position.Y += 50;
+                float yPos = camera.GetPosition().Y;
+                yPos += 50;
+                camera.SetY(yPos);
             }
             if(inputHandler.KeyDown(Keys.D))
             {
-                camera.m_position.X += 50;
+                float xPos = camera.GetPosition().X;
+                xPos += 50;
+                camera.SetX(xPos);
             }
             if(inputHandler.KeyDown(Keys.A))
             {
-                camera.m_position.X -= 50;
+                float xPos = camera.GetPosition().X;
+                xPos -= 50;
+                camera.SetX(xPos);
             }
         }
 
@@ -182,27 +192,27 @@ namespace _2DGame
             float width = graphicsDevice.PresentationParameters.BackBufferWidth;
             float height = graphicsDevice.PresentationParameters.BackBufferHeight;
 
-            float leftMargin = camera.m_position.X + camera.m_margin;
-            float rightMargin = camera.m_position.X + width - camera.m_margin;
+            float leftMargin = camera.GetPosition().X + camera.GetMargin();
+            float rightMargin = camera.GetPosition().X + width - camera.GetMargin();
 
-            float topMargin = camera.m_position.Y + camera.m_margin;
-            float bottomMargin = camera.m_position.Y + height - camera.m_margin;
+            float topMargin = camera.GetPosition().Y + camera.GetMargin();
+            float bottomMargin = camera.GetPosition().Y + height - camera.GetMargin();
 
-            if (player.m_position.X < leftMargin)
+            if (player.GetPosition().X < leftMargin)
             {
-                camera.m_position.X = player.m_position.X - camera.m_margin;
+                camera.SetX(player.GetPosition().X - camera.GetMargin());                
             }
-            if(player.m_position.X + spriteWidth > rightMargin)
+            if(player.GetPosition().X + spriteWidth > rightMargin)
             {
-                camera.m_position.X = player.m_position.X  + spriteWidth - width + camera.m_margin;
+                camera.SetX(player.GetPosition().X + spriteWidth - width + camera.GetMargin());
             }
-            if(player.m_position.Y < topMargin)
+            if(player.GetPosition().Y < topMargin)
             {
-                camera.m_position.Y = player.m_position.Y - camera.m_margin;
+                camera.SetY(player.GetPosition().Y - camera.GetMargin());
             }
-            if(player.m_position.Y + spriteHeight > bottomMargin)
+            if(player.GetPosition().Y + spriteHeight > bottomMargin)
             {
-                camera.m_position.Y = player.m_position.Y + spriteHeight - height + camera.m_margin;
+                camera.SetY(player.GetPosition().Y + spriteHeight - height + camera.GetMargin());
             }
 
         }
@@ -221,10 +231,12 @@ namespace _2DGame
             spriteBatch.Begin();     
 
             if(gameRunning)
-            {
+            {                
                 IsMouseVisible = false;
                 UpdateViewport(df_level.player);
-                df_level.Draw(gameTime, spriteBatch, spriteEffects, camera);                
+                df_level.Draw(gameTime, spriteBatch, spriteEffects, camera);
+                DrawCrossHair();
+                ShowCursorPos();                
             }
             else
             {

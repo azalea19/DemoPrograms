@@ -7,42 +7,70 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace _2DGame
-{ 
+{
+ 
     class MovingPlatform : Platform
     {
-        Vector2 m_startPos;
-        Vector2 m_endPos;
-        float m_tripTime;
-        float m_timer;
+        /// <summary>
+        /// The start position
+        /// </summary>
+        private Vector2 startPosition;
 
+        /// <summary>
+        /// The end position
+        /// </summary>
+        private Vector2 endPosition;
+
+        /// <summary>
+        /// The trip time
+        /// </summary>
+        private float tripTime;
+
+        /// <summary>
+        /// The timer
+        /// </summary>
+        private float timer;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MovingPlatform"/> class.
+        /// </summary>
+        /// <param name="texture">The texture.</param>
+        /// <param name="startPosition">The start position.</param>
+        /// <param name="endPosition">The end position.</param>
+        /// <param name="tripTime">The trip time.</param>
         public MovingPlatform(Texture texture, Vector2 startPosition, Vector2 endPosition, float tripTime)
             : base(texture,startPosition)
         {
-            m_startPos = startPosition;
-            m_endPos = endPosition;
-            m_tripTime = tripTime;
-            m_timer = 0;
+            this.startPosition = startPosition;
+            this.endPosition = endPosition;
+            this.tripTime = tripTime;
+            timer = 0;
             isMoving = true;
         }
 
+
+        /// <summary>
+        /// Updates the platform.
+        /// </summary>
+        /// <param name="gameTime">The game time.</param>
         public override void Update(GameTime gameTime)
         {
             float t = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            m_timer += t;
-            Vector2 oldPos = m_position;
+            timer += t;
+            Vector2 oldPos = position;
 
-            if(m_timer < m_tripTime)
+            if(timer < tripTime)
             {
-                //We are still moving from start pos to end pos
-                m_position = Vector2.Lerp(m_startPos, m_endPos, m_timer/m_tripTime);
-                changeInPos = m_position - oldPos;
+                //We are still moving from start position to end position
+                position = Vector2.Lerp(startPosition, endPosition, timer/tripTime);
+                changeInPos = position - oldPos;
             }
             else
             {
-                m_timer = 0;
-                Vector2 temp = m_startPos;
-                m_startPos = m_endPos;
-                m_endPos = temp;
+                timer = 0;
+                Vector2 temp = startPosition;
+                startPosition = endPosition;
+                endPosition = temp;
             }                   
         }
 

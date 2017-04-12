@@ -8,21 +8,49 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
+
     public class InputHandler
     {
+        /// <summary>
+        /// The last keyboard state
+        /// </summary>
         private KeyboardState lastKeyboardState;
+        /// <summary>
+        /// The current keyboard state
+        /// </summary>
         private KeyboardState currentKeyboardState;
 
+        /// <summary>
+        /// The last mouse
+        /// </summary>
         private MouseState lastMouse;
-        public MouseState currentMouse;
+        /// <summary>
+        /// The current mouse
+        /// </summary>
+        private MouseState currentMouse;
 
+        /// <summary>
+        /// The mouse delta x
+        /// </summary>
         private int mouseDeltaX;
+        /// <summary>
+        /// The mouse delta y
+        /// </summary>
         private int mouseDeltaY;
 
+        /// <summary>
+        /// The last pad state
+        /// </summary>
         private GamePadState lastPadState;
+        /// <summary>
+        /// The current pad state
+        /// </summary>
         private GamePadState currentPadState;
-        
 
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InputHandler"/> class.
+        /// </summary>
         public InputHandler()
         {
             currentKeyboardState = Keyboard.GetState();
@@ -31,6 +59,9 @@ namespace _2DGame
             Update();
         }
 
+        /// <summary>
+        /// Updates this instance.
+        /// </summary>
         public void Update() 
         {
             lastKeyboardState = currentKeyboardState;
@@ -45,6 +76,11 @@ namespace _2DGame
             }
         }
 
+        /// <summary>
+        /// Checks if a key is pressed.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns></returns>
         public bool KeyPressed(Keys key)
         {
             if(lastKeyboardState.IsKeyUp(key) && currentKeyboardState.IsKeyDown(key))
@@ -54,6 +90,11 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Checks is a key is down.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns></returns>
         public bool KeyDown(Keys key)
         {
             if(lastKeyboardState.IsKeyDown(key))
@@ -63,6 +104,10 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Checks if mouse left pressed.
+        /// </summary>
+        /// <returns></returns>
         public bool MouseLeftPressed()
         {
             if(lastMouse.LeftButton == ButtonState.Released && currentMouse.LeftButton == ButtonState.Pressed)
@@ -72,6 +117,10 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Check if mouse left down.
+        /// </summary>
+        /// <returns></returns>
         public bool MouseLeftDown()
         {
             if(currentMouse.LeftButton == ButtonState.Pressed)
@@ -81,6 +130,10 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Checks if mouse right down.
+        /// </summary>
+        /// <returns></returns>
         public bool MouseRightDown()
         {
             if(currentMouse.RightButton == ButtonState.Pressed)
@@ -90,6 +143,10 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Checks if mouse right pressed.
+        /// </summary>
+        /// <returns></returns>
         public bool MouseRightPressed()
         {
             if(lastMouse.RightButton == ButtonState.Released && currentMouse.RightButton == ButtonState.Pressed)
@@ -99,6 +156,10 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Check if game pad A button pressed.
+        /// </summary>
+        /// <returns></returns>
         public bool GamePadAPressed()
         {
             if(lastPadState.IsButtonUp(Buttons.A) && currentPadState.IsButtonDown(Buttons.A))
@@ -108,6 +169,10 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Check if game pad X button pressed.
+        /// </summary>
+        /// <returns></returns>
         public bool GamePadXPressed()
         {
             if (lastPadState.IsButtonUp(Buttons.X) && currentPadState.IsButtonDown(Buttons.X))
@@ -117,6 +182,10 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Checks if game pad Y button pressed.
+        /// </summary>
+        /// <returns></returns>
         public bool GamePadYPressed()
         {
             if (lastPadState.IsButtonUp(Buttons.Y) && currentPadState.IsButtonDown(Buttons.Y))
@@ -126,6 +195,10 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Checks if game pad B button pressed.
+        /// </summary>
+        /// <returns></returns>
         public bool GamePadBPressed()
         {
             if (lastPadState.IsButtonUp(Buttons.B) && currentPadState.IsButtonDown(Buttons.B))
@@ -135,16 +208,28 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Gets the right thumb stick.
+        /// </summary>
+        /// <returns></returns>
         public Vector2 GetRightTS()
         {
             return currentPadState.ThumbSticks.Right;
         }
 
+        /// <summary>
+        /// Gets the left thumbstick.
+        /// </summary>
+        /// <returns></returns>
         public Vector2 GetLeftTS()
         {
             return currentPadState.ThumbSticks.Left;
         }
 
+        /// <summary>
+        /// Checks if game pad left trigger pressed.
+        /// </summary>
+        /// <returns></returns>
         public bool GamePadLTPressed()
         {
             if (lastPadState.Triggers.Left == 0 && currentPadState.Triggers.Left > 0)
@@ -154,6 +239,10 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Checks if game pad right trigger pressed.
+        /// </summary>
+        /// <returns></returns>
         public bool GamePadRTPressed()
         {
             if (lastPadState.Triggers.Right == 0 && currentPadState.Triggers.Right > 0)
@@ -161,6 +250,15 @@ namespace _2DGame
                 return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// Gets the current mouse.
+        /// </summary>
+        /// <returns></returns>
+        public MouseState GetCurrentMouse()
+        {
+            return currentMouse;
         }
 
 

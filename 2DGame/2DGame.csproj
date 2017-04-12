@@ -51,7 +51,6 @@
     <Compile Include="Game\Levels\DarkForest.cs" />
     <Compile Include="Game\Levels\Level.cs" />
     <Compile Include="Game\Managers\InputHandler.cs" />
-    <Compile Include="Game\Collisions\Line.cs" />
     <Compile Include="Game\Particles\Particle.cs" />
     <Compile Include="Game\Particles\ParticleEngine.cs" />
     <Compile Include="Game\Level Assets\BackgroundImage.cs" />

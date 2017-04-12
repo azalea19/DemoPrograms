@@ -8,66 +8,102 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
+    
     class TextureReel
     {
-        private List<Texture> m_textures;
+        /// <summary>
+        /// The textures in the texture reel.
+        /// </summary>
+        private List<Texture> textures;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextureReel"/> class.
+        /// </summary>
         public TextureReel()
         {          
-            m_textures = new List<Texture>();
+            textures = new List<Texture>();
         }
 
-        public TextureReel(Texture reel)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextureReel"/> class.
+        /// </summary>
+        /// <param name="spriteSheet">The sprite sheet.</param>
+        public TextureReel(Texture spriteSheet)
         {
-            m_textures = SplitTexture(reel);
+            textures = SplitTexture(spriteSheet);
         }
 
+        /// <summary>
+        /// Adds the texture.
+        /// </summary>
+        /// <param name="texture">The texture.</param>
         public void AddTexture(Texture texture)
         {
-            m_textures.Add(texture);
+            textures.Add(texture);
         }
 
+        /// <summary>
+        /// Gets the frame count.
+        /// </summary>
+        /// <returns></returns>
         public int GetFrameCount()
         {
-            return m_textures.Count;
+            return textures.Count;
         }
 
+        /// <summary>
+        /// Gets the width of the texture.
+        /// </summary>
+        /// <returns></returns>
         public int GetTextureWidth()
         {
-            if(m_textures.Count == 0)
+            if(textures.Count == 0)
             {
                 return 0;
             }
-            return m_textures[0].Width;         
+            return textures[0].Width;         
         }
 
+        /// <summary>
+        /// Gets the height of the texture.
+        /// </summary>
+        /// <returns></returns>
         public int GetTextureHeight()
         {
-            if(m_textures.Count == 0)
+            if(textures.Count == 0)
             {
                 return 0;
             }
-            return m_textures[0].Height;
+            return textures[0].Height;
         }
 
+        /// <summary>
+        /// Gets the texture.
+        /// </summary>
+        /// <param name="index">The index.</param>
+        /// <returns></returns>
         public Texture GetTexture(int index)
         {
-            return m_textures[index];
+            return textures[index];
         }
 
-        private List<Texture> SplitTexture(Texture reel)
+        /// <summary>
+        /// Splits the sprite sheet in to a list of textures.
+        /// </summary>
+        /// <param name="spriteSheet">The sprite sheet.</param>
+        /// <returns></returns>
+        private List<Texture> SplitTexture(Texture spriteSheet)
         {
             List<Texture> newList;
-            newList = new List<Texture>(reel.Width / reel.Height);     
+            newList = new List<Texture>(spriteSheet.Width / spriteSheet.Height);     
 
             for (int i = 0; i < newList.Capacity; i++)
             {
-                RenderTarget2D newTarget = new RenderTarget2D(Game1.graphicsDevice, reel.Height, reel.Height,false,SurfaceFormat.Color,DepthFormat.Depth24);
-                //newTarget = new RenderTarget2D(Game1.graphicsDevice, reel.Height, reel.Height, SurfaceFormat.Vector4,DepthFormat.Depth24);
+                RenderTarget2D newTarget = new RenderTarget2D(Game1.graphicsDevice, spriteSheet.Height, spriteSheet.Height,false,SurfaceFormat.Color,DepthFormat.Depth24);               
                 Game1.graphicsDevice.SetRenderTarget(newTarget);
                 Game1.graphicsDevice.Clear(Color.Transparent);
                 Game1.spriteBatch.Begin();
-                Game1.spriteBatch.Draw(reel, new Rectangle(0, 0, reel.Height, reel.Height), new Rectangle(i * reel.Height, 0, reel.Height, reel.Height), Color.White);
+                Game1.spriteBatch.Draw(spriteSheet, new Rectangle(0, 0, spriteSheet.Height, spriteSheet.Height), new Rectangle(i * spriteSheet.Height, 0, spriteSheet.Height, spriteSheet.Height), Color.White);
                 Game1.spriteBatch.End();
                 Game1.graphicsDevice.SetRenderTarget(null);
                 Texture newTex = new Texture((Texture2D)newTarget);

@@ -8,52 +8,76 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
-    //Controls the playback of an animation.
+   
     public class AnimationHandler
     {
-        private Animation m_animation;
+        /// <summary>
+        /// The animation the handler is in charge of.
+        /// </summary>
+        private Animation animation;
 
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AnimationHandler"/> class.
+        /// </summary>
+        /// <param name="animation">The animation.</param>
         public AnimationHandler(Animation animation)
         {
-            m_animation = animation;
+            this.animation = animation;
         }
 
-        public Vector2 GetOrigin()
-        {
-            return new Vector2(m_animation.GetFrameWidth() / 2.0f, m_animation.GetFrameHeight());
-        }
 
+        /// <summary>
+        /// Returns the total the animation time.
+        /// </summary>
+        /// <returns></returns>
         public float TotalAnimationTime()
         {
-            return m_animation.GetFrameTime() * m_animation.GetFrameCount();
+            return animation.GetFrameTime() * animation.GetFrameCount();
         }
 
-        //Gets the animation currently playing
+        /// <summary>
+        /// Gets the animation the handler is in charge of.
+        /// </summary>
+        /// <returns></returns>
         public Animation GetAnimation()
         {
-            return m_animation;
+            return animation;
         }
 
+        /// <summary>
+        /// Gets the index of the frame based on the current time.
+        /// </summary>
+        /// <param name="dt">The change in time.</param>
+        /// <returns></returns>
         public int GetFrameIndex(float dt)
         {
-            if(m_animation.IsLooping())
+            if(animation.IsLooping())
             {
-                return (int)((dt / m_animation.GetFrameTime()) % m_animation.GetFrameCount());
+                return (int)((dt / animation.GetFrameTime()) % animation.GetFrameCount());
             }
             else
             {
-                return Math.Min((int)(dt / m_animation.GetFrameTime()), m_animation.GetFrameCount() - 1);
+                return Math.Min((int)(dt / animation.GetFrameTime()), animation.GetFrameCount() - 1);
             }
-        } 
+        }
 
+        /// <summary>
+        /// Draws the animation at the frame based on the current time.
+        /// </summary>
+        /// <param name="dt">The dt.</param>
+        /// <param name="spriteBatch">The sprite batch.</param>
+        /// <param name="position">The position.</param>
+        /// <param name="spriteEffects">The sprite effects.</param>
+        /// <param name="scale">The scale.</param>
+        /// <exception cref="Exception">No animation is currently linked to this handler.</exception>
         public void Draw(float dt, SpriteBatch spriteBatch, Vector2 position, SpriteEffects spriteEffects, float scale)
         {
-            if (m_animation == null)
+            if (animation == null)
             {
                 throw new Exception("No animation is currently linked to this handler.");
-            }
-                    
-            spriteBatch.Draw(m_animation.GetTexture(GetFrameIndex(dt)), position, null, Color.White, 0, new Vector2(0, 0), scale, spriteEffects, 0);           
+            }                    
+            spriteBatch.Draw(animation.GetTexture(GetFrameIndex(dt)), position, null, Color.White, 0, new Vector2(0, 0), scale, spriteEffects, 0);           
         }
 
     }

@@ -8,34 +8,97 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace _2DGame
 {
+
     class DarkForest : Level
     {
+        /// <summary>
+        /// The level complete
+        /// </summary>
         public bool levelComplete;
 
+        /// <summary>
+        /// The end post
+        /// </summary>
         Platform endPost;
+
+        /// <summary>
+        /// The check point
+        /// </summary>
         Vector2 checkPoint;
+
+        /// <summary>
+        /// The particles
+        /// </summary>
         List<Texture> particles;
+
+        /// <summary>
+        /// The crystals
+        /// </summary>
         List<Crystal> crystals;
+
+        /// <summary>
+        /// The spikes
+        /// </summary>
         List<Spikes> spikes;
+
+        /// <summary>
+        /// The player
+        /// </summary>
         public Player player;
+
+        /// <summary>
+        /// The camera
+        /// </summary>
         public Camera camera;
 
+        /// <summary>
+        /// The crystals collected
+        /// </summary>
         public int crystalsCollected;
+
+        /// <summary>
+        /// The total crystals in the level
+        /// </summary>
         public int totalCrystals;
 
+        /// <summary>
+        /// The background
+        /// </summary>
         List<BackgroundImage> background;
+
+        /// <summary>
+        /// The middleground
+        /// </summary>
         List<BackgroundImage> middleground;
+
+        /// <summary>
+        /// The foreground
+        /// </summary>
         List<BackgroundImage> foreground;
+
+        /// <summary>
+        /// The trees
+        /// </summary>
         List<Texture> trees;
 
+        /// <summary>
+        /// The surface particle engine
+        /// </summary>
         SurfaceParticleEngine sp;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DarkForest"/> class.
+        /// </summary>
+        /// <param name="cam">The camera.</param>
         public DarkForest(Camera cam)
         {
             camera = cam;
             Initialise();          
         }
 
+        /// <summary>
+        /// Initialises this instance.
+        /// </summary>
         public override void Initialise()
         {
             levelComplete = false;
@@ -297,31 +360,47 @@ namespace _2DGame
             totalCrystals = crystals.Count;
         }
 
+        /// <summary>
+        /// Converts an image position to world space.
+        /// </summary>
+        /// <param name="imagePosition">The image position.</param>
+        /// <param name="worldPosition">The world position.</param>
+        /// <returns></returns>
         public Vector2 ImageToWorldSpace(Vector2 imagePosition, Vector2 worldPosition)
         {
             return (imagePosition + worldPosition) + new Vector2(0.5f,0.5f);
         }
 
+        /// <summary>
+        /// Converts a world position to a world position of a second image.
+        /// </summary>
+        /// <param name="worldPosition">The world position.</param>
+        /// <param name="worldPosition2">The world position2.</param>
+        /// <returns></returns>
         public Vector2 WorldToImageSpace(Vector2 worldPosition, Vector2 worldPosition2)
         {
             return worldPosition - worldPosition2;
         }
 
+        /// <summary>
+        /// Checks if a pixel collision has occurred.
+        /// </summary>
+        /// <param name="t1">The texture of object1..</param>
+        /// <param name="object1Position">The object1 position.</param>
+        /// <param name="t2">The texture of object2.</param>
+        /// <param name="object2Position">The object2 position.</param>
+        /// <returns></returns>
         public bool PixelCollision(Texture t1, Vector2 object1Position, Texture t2, Vector2 object2Position)
         {
             BoundingBox a = new BoundingBox(t1, object1Position);
             BoundingBox b = new BoundingBox(t2, object2Position);
             BoundingBox intersection = BoundingBox.Intersection(a, b);
 
-            int xMin = (int)(intersection.m_position.X - object1Position.X);
-            int yMin = (int)(intersection.m_position.Y - object1Position.Y);
-            int xMax = (int)(intersection.m_position.X + intersection.m_size.X - object1Position.X);
-            int yMax = (int)(intersection.m_position.Y + intersection.m_size.Y - object1Position.Y);
+            int xMin = (int)(intersection.GetPosition().X - object1Position.X);
+            int yMin = (int)(intersection.GetPosition().Y - object1Position.Y);
+            int xMax = (int)(intersection.GetPosition().X + intersection.GetSize().X - object1Position.X);
+            int yMax = (int)(intersection.GetPosition().Y + intersection.GetSize().Y - object1Position.Y);
 
-            //for(int y=0; y < t1.Height; y++)
-            //{
-            //    for(int x=0; x < t1.Width; x++)
-            //    {
             for (int y = yMin; y < yMax; y++)
             {
                 for (int x = xMin; x < xMax; x++)
@@ -361,15 +440,12 @@ namespace _2DGame
             return false;
         }
 
-        public bool CheckPlayerCollisionPos(Vector2 newPos, GameTime gameTime)
-        {
-            Vector2 oldPos = player.m_position;
-            player.m_position = newPos;
-            bool result = PlayerCollision(gameTime);
-            player.m_position = oldPos;
-            return result;
-        }
 
+        /// <summary>
+        /// Checks if the player is colliding.
+        /// </summary>
+        /// <param name="gameTime">The game time.</param>
+        /// <returns></returns>
         public bool PlayerCollision(GameTime gameTime)
         {
             BoundingBox temp;
@@ -377,15 +453,15 @@ namespace _2DGame
 
             for(int i =0; i < m_platforms.Count; i++)
             {
-                temp = new BoundingBox(m_platforms[i].m_texture, m_platforms[i].m_position);
+                temp = new BoundingBox(m_platforms[i].GetTexture(), m_platforms[i].GetPosition());
 
                 if (BoundingBox.Intersects(pb, temp))
                 {
-                    if (PixelCollision(player.GetCurrentTexture(gameTime), player.m_position, m_platforms[i].GetTexture(), m_platforms[i].m_position))
+                    if (PixelCollision(player.GetCurrentTexture(gameTime), player.GetPosition(), m_platforms[i].GetTexture(), m_platforms[i].GetPosition()))
                     {
-                        if (m_platforms[i].isMoving)
+                        if (m_platforms[i].IsMoving())
                         {
-                            player.m_position += m_platforms[i].changeInPos;
+                            player.AddToPosition(m_platforms[i].GetChangeInPosition());
                         }
 
                         return true;
@@ -397,9 +473,9 @@ namespace _2DGame
             {
                 temp = new BoundingBox(spikes[i].GetTexture(), spikes[i].GetPosition());
 
-                if (PixelCollision(player.GetCurrentTexture(gameTime), player.m_position, spikes[i].GetTexture(), spikes[i].GetPosition()))
+                if (PixelCollision(player.GetCurrentTexture(gameTime), player.GetPosition(), spikes[i].GetTexture(), spikes[i].GetPosition()))
                 {
-                    player.isDead = true;                                     
+                    player.IsDead(true);                                 
                 }
             }
 
@@ -407,7 +483,7 @@ namespace _2DGame
             {
                 temp = new BoundingBox(crystals[i].GetTexture(), crystals[i].GetPosition());
 
-                if (PixelCollision(player.GetCurrentTexture(gameTime), player.m_position, crystals[i].GetTexture(), crystals[i].GetPosition()))
+                if (PixelCollision(player.GetCurrentTexture(gameTime), player.GetPosition(), crystals[i].GetTexture(), crystals[i].GetPosition()))
                 {
                     crystals.Remove(crystals[i]);
                     crystalsCollected++;
@@ -415,7 +491,7 @@ namespace _2DGame
             }
 
 
-            if (player.m_position.X > endPost.m_position.X)
+            if (player.GetPosition().X > endPost.GetPosition().X)
             {
                 if(crystals.Count == 0)
                 {
@@ -426,13 +502,17 @@ namespace _2DGame
             return false;
         }
 
+        /// <summary>
+        /// Updates the level.
+        /// </summary>
+        /// <param name="gameTime">The game time.</param>
         public override void Update(GameTime gameTime)
         {
             sp.Update((float)gameTime.TotalGameTime.TotalSeconds);
 
-            if(player.m_position.Y > 10200)
+            if(player.GetPosition().Y > 10200)
             {
-                player.isDead = true;
+                player.IsDead(true);
             }
               
             for (int j = 0; j < m_platforms.Count; j++)
@@ -444,20 +524,28 @@ namespace _2DGame
                 crystals[j].Update(gameTime);
             }
 
-            player.Update(gameTime);          
-            player.m_position += player.m_velocity;
+            player.Update(gameTime);
+            player.AddToPosition(player.GetVelocity());
 
             if(PlayerCollision(gameTime))
             {
-                player.m_velocity.Y = 0;
-                player.m_position = IslandSearch(gameTime);
+                player.SetVelocityY(0);
+                player.SetPosition(IslandSearch(gameTime));
             }
-            player.m_velocity.Y += 2f;
-            player.m_velocity.X *= 0.5f;            
+            player.SetVelocityY(player.GetVelocity().Y + 2f);
+            //player.m_velocity.Y += 2f;
+            player.SetVelocityX(player.GetVelocity().X * 0.5f);
+            //player.m_velocity.X *= 0.5f;            
         }
 
+        /// <summary>
+        /// Performs an star shaped island search and returns a new position for the player.
+        /// </summary>
+        /// <param name="gameTime">The game time.</param>
+        /// <returns></returns>
         public Vector2 IslandSearch(GameTime gameTime)
         {
+            //Diamond search
 
             ////return player.m_position;
             //Vector2 pos = player.m_position;
@@ -512,23 +600,24 @@ namespace _2DGame
             //}
 
 
+            //Star search
             Vector2 tryNewPos;
             Vector2 result = new Vector2(0, 0);
             //Let everything happen then fix the the position so we aren't colliding with anything anymore
             int moveLayer = 1;
             //While there is a collision move up, down, left and right until no collision
 
-            Vector2 oldPos = player.m_position;
+            Vector2 oldPos = player.GetPosition();
 
             while (true)
             {
                 //Move up
                 tryNewPos = new Vector2(oldPos.X, oldPos.Y - moveLayer);
-                player.m_position = tryNewPos;
+                player.SetPosition(tryNewPos);
                 if (PlayerCollision(gameTime))
                 {
                     //Didn't work
-                    player.m_position = oldPos;
+                    player.SetPosition(oldPos);
                 }
                 else
                 {
@@ -538,11 +627,11 @@ namespace _2DGame
 
                 //Move down
                 tryNewPos = new Vector2(oldPos.X, oldPos.Y + moveLayer);
-                player.m_position = tryNewPos;
+                player.SetPosition(tryNewPos);
                 if (PlayerCollision(gameTime))
                 {
                     //Didn't work
-                    player.m_position = oldPos;
+                    player.SetPosition(oldPos);
                 }
                 else
                 {
@@ -552,11 +641,11 @@ namespace _2DGame
 
                 //Move left
                 tryNewPos = new Vector2(oldPos.X - moveLayer, oldPos.Y);
-                player.m_position = tryNewPos;
+                player.SetPosition(tryNewPos);
                 if (PlayerCollision(gameTime))
                 {
                     //Didn't work
-                    player.m_position = oldPos;
+                    player.SetPosition(oldPos);
                 }
                 else
                 {
@@ -566,11 +655,11 @@ namespace _2DGame
 
                 //Move right
                 tryNewPos = new Vector2(oldPos.X + moveLayer, oldPos.Y);
-                player.m_position = tryNewPos;
+                player.SetPosition(tryNewPos);
                 if (PlayerCollision(gameTime))
                 {
                     //Didn't work
-                    player.m_position = oldPos;
+                    player.SetPosition(oldPos);
                 }
                 else
                 {
@@ -580,11 +669,11 @@ namespace _2DGame
 
                 //Move up and left           
                 tryNewPos = new Vector2(oldPos.X - moveLayer, oldPos.Y - moveLayer);
-                player.m_position = tryNewPos;
+                player.SetPosition(tryNewPos);
                 if (PlayerCollision(gameTime))
                 {
                     //Didn't work
-                    player.m_position = oldPos;
+                    player.SetPosition(oldPos);
                 }
                 else
                 {
@@ -594,11 +683,11 @@ namespace _2DGame
 
                 //Move up and right         
                 tryNewPos = new Vector2(oldPos.X + moveLayer, oldPos.Y - moveLayer);
-                player.m_position = tryNewPos;
+                player.SetPosition(tryNewPos);
                 if (PlayerCollision(gameTime))
                 {
                     //Didn't work
-                    player.m_position = oldPos;
+                    player.SetPosition(oldPos);
                 }
                 else
                 {
@@ -608,11 +697,11 @@ namespace _2DGame
 
                 //Move down and left
                 tryNewPos = new Vector2(oldPos.X - moveLayer, oldPos.Y + moveLayer);
-                player.m_position = tryNewPos;
+                player.SetPosition(tryNewPos);
                 if (PlayerCollision(gameTime))
                 {
                     //Didn't work
-                    player.m_position = oldPos;
+                    player.SetPosition(oldPos);
                 }
                 else
                 {
@@ -622,11 +711,11 @@ namespace _2DGame
 
                 //Move down and right
                 tryNewPos = new Vector2(oldPos.X - moveLayer, oldPos.Y + moveLayer);
-                player.m_position = tryNewPos;
+                player.SetPosition(tryNewPos);
                 if (PlayerCollision(gameTime))
                 {
                     //Didn't work
-                    player.m_position = oldPos;
+                    player.SetPosition(oldPos);
                 }
                 else
                 {
@@ -640,6 +729,13 @@ namespace _2DGame
             return result;
         }
 
+        /// <summary>
+        /// Draws the level.
+        /// </summary>
+        /// <param name="gameTime">The game time.</param>
+        /// <param name="spriteBatch">The sprite batch.</param>
+        /// <param name="spriteEffects">The sprite effects.</param>
+        /// <param name="camera">The camera.</param>
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch, SpriteEffects spriteEffects, Camera camera)
         {          
             for(int i =0; i < background.Count; i++)

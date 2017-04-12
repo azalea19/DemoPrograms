@@ -10,20 +10,55 @@ namespace _2DGame
 {
     class BackgroundImage
     {
-        public Texture m_texture;
-        public Vector2 m_position;
+        /// <summary>
+        /// The texture
+        /// </summary>
+        private Texture texture;
 
+        /// <summary>
+        /// The position
+        /// </summary>
+        private Vector2 position;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BackgroundImage"/> class.
+        /// </summary>
+        /// <param name="texture">The texture.</param>
+        /// <param name="position">The position.</param>
         public BackgroundImage(Texture texture, Vector2 position)
         {
-            m_texture = texture;
-            m_position = position;
+            this.texture = texture;
+            this.position = position;
         }
 
+        /// <summary>
+        /// Gets the texture.
+        /// </summary>
+        /// <returns></returns>
+        public Texture GetTexture()
+        {
+            return texture;
+        }
+
+        /// <summary>
+        /// Gets the position.
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 GetPosition()
+        {
+            return position;
+        }
+
+        /// <summary>
+        /// Draws the specified background image.
+        /// </summary>
+        /// <param name="spriteBatch">The sprite batch.</param>
+        /// <param name="camera">The camera.</param>
         public void Draw(SpriteBatch spriteBatch, Camera camera)
         {
-            Rectangle sourceRect = new Rectangle(0, 0, m_texture.Width, m_texture.Height);
-            Vector2 origin = new Vector2(m_texture.Width / 2, m_texture.Height / 2);
-            spriteBatch.Draw(m_texture, m_position - camera.m_position, sourceRect, Color.White);
+            Rectangle sourceRect = new Rectangle(0, 0, texture.Width, texture.Height);
+            Vector2 origin = new Vector2(texture.Width / 2, texture.Height / 2);
+            spriteBatch.Draw(texture, position - camera.GetPosition(), sourceRect, Color.White);
         }
     }
 }

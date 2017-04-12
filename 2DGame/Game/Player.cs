@@ -35,23 +35,60 @@ namespace _2DGame
 
     public class Player
     {
-        List<Texture> particles = new List<Texture>();
+        /// <summary>
+        /// The particles
+        /// </summary>
+        private List<Texture> particles = new List<Texture>();
+
+        /// <summary>
+        /// The jump emitter
+        /// </summary>
         private ParticleEngine jumpEmitter;
 
-        Vector2 checkPoint;
+        /// <summary>
+        /// The players last check point
+        /// </summary>
+        private Vector2 checkPoint;
 
-        public AnimationHandler[] m_animations;
+        /// <summary>
+        /// The animations array
+        /// </summary>
+        private AnimationHandler[] m_animations;
 
-        int m_currentState;
-        float m_animationStart;
+        /// <summary>
+        /// The current state of the player
+        /// </summary>
+        private int m_currentState;
 
+        /// <summary>
+        /// The animation start
+        /// </summary>
+        private float m_animationStart;
+
+        /// <summary>
+        /// The m state lookup
+        /// </summary>
         static private int[,] m_stateLookup;
 
-        public Vector2 m_position;
-        public Vector2 m_velocity;
+        /// <summary>
+        /// The players position
+        /// </summary>
+        private Vector2 m_position;
 
-        public bool isDead;
+        /// <summary>
+        /// The players velocity
+        /// </summary>
+        private Vector2 m_velocity;
 
+        /// <summary>
+        /// If the player is dead
+        /// </summary>
+        private bool isDead;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Player"/> class.
+        /// </summary>
+        /// <param name="startPos">The start position.</param>
         public Player(Vector2 startPos)
         {
             m_animations = new AnimationHandler[PlayerState.NUM_STATES];           
@@ -71,9 +108,14 @@ namespace _2DGame
             jumpEmitter = new ParticleEngine(particles, m_position, 1, 0.4f, 30);
 
             isDead = false;
-        } 
+        }
 
 
+        /// <summary>
+        /// Gets the bounding box of the player.
+        /// </summary>
+        /// <param name="gameTime">The game time.</param>
+        /// <returns></returns>
         public BoundingBox GetBoundingBox(GameTime gameTime)
         {
             float dt = (float)gameTime.TotalGameTime.TotalSeconds - m_animationStart;
@@ -83,6 +125,11 @@ namespace _2DGame
         }
 
 
+        /// <summary>
+        /// Gets the current texture of the player.
+        /// </summary>
+        /// <param name="gameTime">The game time.</param>
+        /// <returns></returns>
         public Texture GetCurrentTexture(GameTime gameTime)
         {
             float dt = (float)gameTime.TotalGameTime.TotalSeconds - m_animationStart;
@@ -92,6 +139,9 @@ namespace _2DGame
         }
 
 
+        /// <summary>
+        /// Loads the players state lookup.
+        /// </summary>
         public void LoadStateLookup()
         {
             m_stateLookup[PlayerState.IDLE_LEFT, InputAction.LEFT] = PlayerState.RUN_LEFT;
@@ -126,8 +176,11 @@ namespace _2DGame
             m_stateLookup[PlayerState.DEAD_RIGHT, InputAction.RIGHT] = PlayerState.DEAD_RIGHT;
             m_stateLookup[PlayerState.DEAD_RIGHT, InputAction.JUMP] = PlayerState.DEAD_RIGHT;
         }
-          
-          
+
+
+        /// <summary>
+        /// Loads the players animations.
+        /// </summary>
         public void LoadAnimations()
         {
             Animation dead_left = new Animation(0.1f, true);
@@ -210,7 +263,7 @@ namespace _2DGame
             m_animations[PlayerState.JUMP_RIGHT] = new AnimationHandler(jump_right);
 
 
-            Animation idle_left = new Animation(0.1f, true);
+            Animation idle_left = new Animation(0.08f, true);
             idle_left.AddFrame(Texture.Create("Player/Idle_Left/001_Left"));
             idle_left.AddFrame(Texture.Create("Player/Idle_Left/002_Left"));
             idle_left.AddFrame(Texture.Create("Player/Idle_Left/003_Left"));
@@ -232,7 +285,7 @@ namespace _2DGame
             idle_left.AddFrame(Texture.Create("Player/Idle_Left/019_Left"));
             m_animations[PlayerState.IDLE_LEFT] = new AnimationHandler(idle_left);
 
-            Animation idle_right = new Animation(0.1f, true);
+            Animation idle_right = new Animation(0.08f, true);
             idle_right.AddFrame(Texture.Create("Player/Idle_Right/001_Right"));
             idle_right.AddFrame(Texture.Create("Player/Idle_Right/002_Right"));
             idle_right.AddFrame(Texture.Create("Player/Idle_Right/003_Right"));
@@ -255,7 +308,7 @@ namespace _2DGame
             m_animations[PlayerState.IDLE_RIGHT] = new AnimationHandler(idle_right);
 
 
-            Animation run_left = new Animation(0.1f, true);
+            Animation run_left = new Animation(0.045f, true);
             run_left.AddFrame(Texture.Create("Player/Run_Left/001_Left"));
             run_left.AddFrame(Texture.Create("Player/Run_Left/002_Left"));
             run_left.AddFrame(Texture.Create("Player/Run_Left/003_Left"));
@@ -269,7 +322,7 @@ namespace _2DGame
             run_left.AddFrame(Texture.Create("Player/Run_Left/011_Left"));
             m_animations[PlayerState.RUN_LEFT] = new AnimationHandler(run_left);
 
-            Animation run_right = new Animation(0.1f, true);
+            Animation run_right = new Animation(0.045f, true);
             run_right.AddFrame(Texture.Create("Player/Run_Right/001_Right"));
             run_right.AddFrame(Texture.Create("Player/Run_Right/002_Right"));
             run_right.AddFrame(Texture.Create("Player/Run_Right/003_Right"));
@@ -284,13 +337,104 @@ namespace _2DGame
             m_animations[PlayerState.RUN_RIGHT] = new AnimationHandler(run_right);
         }
 
+        /// <summary>
+        /// Determines whether the player is dead.
+        /// </summary>
+        /// <returns>
+        ///   <c>true</c> if the player is dead; otherwise, <c>false</c>.
+        /// </returns>
+        public bool IsDead()
+        {
+            return isDead;
+        }
 
+        /// <summary>
+        /// Sets the value of isDead.
+        /// </summary>
+        /// <param name="value">if set to <c>true</c> [value].</param>
+        public void IsDead(bool value)
+        {
+            isDead = value;
+        }
+
+        /// <summary>
+        /// Gets the position.
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 GetPosition()
+        {
+            return m_position;
+        }
+
+        /// <summary>
+        /// Sets the position.
+        /// </summary>
+        /// <param name="position">The position.</param>
+        public void SetPosition(Vector2 position)
+        {
+            m_position = position;
+        }
+
+        /// <summary>
+        /// Adds value to position.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        public void AddToPosition(Vector2 value)
+        {
+            m_position += value;
+        }
+
+        /// <summary>
+        /// Gets the velocity.
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 GetVelocity()
+        {
+            return m_velocity;
+        }
+
+        /// <summary>
+        /// Sets the velocity.
+        /// </summary>
+        /// <param name="newVelocity">The new velocity.</param>
+        public void SetVelocity(Vector2 newVelocity)
+        {
+            m_velocity = newVelocity;
+        }
+
+        /// <summary>
+        /// Sets the velocity x.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        public void SetVelocityX(float x)
+        {
+            m_velocity.X = x;
+        }
+
+        /// <summary>
+        /// Sets the velocity y.
+        /// </summary>
+        /// <param name="y">The y.</param>
+        public void SetVelocityY(float y)
+        {
+            m_velocity.Y = y;
+        }
+
+        /// <summary>
+        /// Restarts the start of the animation to current time.
+        /// </summary>
+        /// <param name="currentTime">The current time.</param>
         public void Restart(float currentTime)
         {
             m_animationStart = currentTime;
         }
 
 
+        /// <summary>
+        /// Checks if an animation that can't be interrupted is playing.
+        /// </summary>
+        /// <param name="currentTime">The current time.</param>
+        /// <returns></returns>
         public bool AnimationPlaying(float currentTime)
         {
             bool isPlaying = false;
@@ -356,6 +500,11 @@ namespace _2DGame
         }
 
 
+        /// <summary>
+        /// Sets the state of the player.
+        /// </summary>
+        /// <param name="newState">The new state.</param>
+        /// <param name="currentTime">The current time.</param>
         public void SetState(int newState, float currentTime)
         {
             if(m_currentState != newState)
@@ -366,6 +515,10 @@ namespace _2DGame
         }
 
 
+        /// <summary>
+        /// Updates the player.
+        /// </summary>
+        /// <param name="gameTime">The game time.</param>
         public void Update(GameTime gameTime)
         {
             float currentTime = (float)gameTime.TotalGameTime.TotalSeconds;
@@ -443,17 +596,28 @@ namespace _2DGame
             jumpEmitter.Update((float)gameTime.TotalGameTime.TotalSeconds);
         }
 
+        /// <summary>
+        /// Gets the state.
+        /// </summary>
+        /// <returns></returns>
         public int GetState()
         {
             return m_currentState;
         }
 
 
+        /// <summary>
+        /// Draws the player.
+        /// </summary>
+        /// <param name="gameTime">The game time.</param>
+        /// <param name="spriteBatch">The sprite batch.</param>
+        /// <param name="spriteEffects">The sprite effects.</param>
+        /// <param name="camera">The camera.</param>
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch, SpriteEffects spriteEffects, Camera camera)
         {
             float dt = (float)gameTime.TotalGameTime.TotalSeconds - m_animationStart;
             
-            m_animations[m_currentState].Draw(dt, spriteBatch, m_position - camera.m_position, spriteEffects, 1f);
+            m_animations[m_currentState].Draw(dt, spriteBatch, m_position - camera.GetPosition(), spriteEffects, 1f);
             jumpEmitter.Draw(spriteBatch, camera);
         }    
 

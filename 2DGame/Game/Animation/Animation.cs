@@ -7,67 +7,114 @@ using System.Threading.Tasks;
 
 namespace _2DGame
 {
+
     public class Animation
     {
 
-        private float m_frameTime;
-        private bool m_isLooping;
-        private TextureReel m_reel;
+        /// <summary>
+        /// The frame time to display each frame of the animation
+        /// </summary>
+        private float frameTime;
 
+        /// <summary>
+        /// Whether the animation is looping
+        /// </summary>
+        private bool isLooping;
+
+        /// <summary>
+        /// The texture reel
+        /// </summary>
+        private TextureReel reel;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Animation"/> class.
+        /// </summary>
+        /// <param name="texture">The texture.</param>
+        /// <param name="frameTime">The frame time.</param>
+        /// <param name="isLooping">if set to <c>true</c> [is looping].</param>
         public Animation(Texture texture, float frameTime, bool isLooping)
-        {
-            //m_texture = texture;
-            m_frameTime = frameTime;
-            m_isLooping = isLooping;
-            m_reel = new TextureReel(texture);
+        {           
+            this.frameTime = frameTime;
+            this.isLooping = isLooping;
+            this.reel = new TextureReel(texture);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Animation"/> class.
+        /// </summary>
+        /// <param name="frameTime">The frame time.</param>
+        /// <param name="isLooping">if set to <c>true</c> [is looping].</param>
         public Animation(float frameTime, bool isLooping)
         {
-            //m_texture = texture;
-            m_frameTime = frameTime;
-            m_isLooping = isLooping;
-            m_reel = new TextureReel();
+            this.frameTime = frameTime;
+            this.isLooping = isLooping;
+            this.reel = new TextureReel();
         }
 
+        /// <summary>
+        /// Adds a new frame to the animation.
+        /// </summary>
+        /// <param name="texture">The texture.</param>
         public void AddFrame(Texture texture)
         {
-            m_reel.AddTexture(texture);
+            reel.AddTexture(texture);
         }
 
+        /// <summary>
+        /// Gets the frame time.
+        /// </summary>
+        /// <returns></returns>
         public float GetFrameTime()
         {
-            return m_frameTime;
+            return frameTime;
         }
 
+        /// <summary>
+        /// Determines whether this animation is looping.
+        /// </summary>
+        /// <returns>
+        ///   <c>true</c> if this animation is looping; otherwise, <c>false</c>.
+        /// </returns>
         public bool IsLooping()
         {
-            return m_isLooping;
+            return isLooping;
         }
 
+        /// <summary>
+        /// Gets the frame count.
+        /// </summary>
+        /// <returns></returns>
         public int GetFrameCount()
-        {
-            //return m_texture.Width / m_frameWidthInPixels;
-            //return m_texture.Width / m_texture.Height;
-            return m_reel.GetFrameCount();
+        {          
+            return reel.GetFrameCount();
         }
 
+        /// <summary>
+        /// Gets the width of the frame.
+        /// </summary>
+        /// <returns></returns>
         public int GetFrameWidth()
-        {
-            //return m_frameWidthInPixels;
-            //return m_texture.Height;
-            return m_reel.GetTextureWidth();
+        {          
+            return reel.GetTextureWidth();
         }
 
+        /// <summary>
+        /// Gets the height of the frame.
+        /// </summary>
+        /// <returns></returns>
         public int GetFrameHeight()
         {
-            //return m_frameHeightInPixels;
-            return m_reel.GetTextureHeight();
+            return reel.GetTextureHeight();
         }
 
+        /// <summary>
+        /// Gets the texture.
+        /// </summary>
+        /// <param name="index">The index.</param>
+        /// <returns></returns>
         public Texture GetTexture(int index)
         {
-            return m_reel.GetTexture(index);
+            return reel.GetTexture(index);
         }
     }
 }
